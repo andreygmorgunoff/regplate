@@ -31,29 +31,29 @@ class PlateUAAutoTemporary04 : PlateUAAuto04
             "([\\d\(unknownNumber)]{4})"
     }
     
+    override var body : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let range = Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.startIndex, 4))
+            
+            result = full.substringWithRange(range)
+        }
+        
+        return result
+    }
+    
     override var suffix : String?
     {
         var result : String? = super.value
         
         if let full = result
         {
-            let index : String.Index = advance(full.startIndex, 2)
+            let index : String.Index = advance(full.endIndex, -4)
             
             result = full.substringFromIndex(index)
-        }
-        
-        return result
-    }
-    
-    override var prefix : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            let index : String.Index = advance(full.startIndex, 2)
-            
-            result = full.substringToIndex(index)
         }
         
         return result

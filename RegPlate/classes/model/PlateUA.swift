@@ -142,75 +142,94 @@ class PlateUA : PlateUAProtocol
     
     var back   : String
     {
-            return PlateUAUtils.backImageNameFor(type: type)
+        return PlateUAUtils.backImageNameFor(type: type)
     }
     
     var year  : String?
     {
-            var result : String?
-            
-            if let region = region()
-            {
-                result = "\(region.year!)"
-            }
-            
-            return result
+        var result : String?
+        
+        if let region = region()
+        {
+            result = "\(region.year!)"
+        }
+        
+        return result
     }
     
     var area  : String?
     {
-            var result : String?
-            
-            if let region = region()
-            {
-                result = "\(region.region!)"
-            }
-            
-            return result
+        var result : String?
+        
+        if let region = region()
+        {
+            result = "\(region.region!)"
+        }
+        
+        return result
     }
     
     var value : String?
     {
-            var result : String? = self.normalizedInput()
+        var result : String? = self.normalizedInput()
+        
+        if (result != nil)
+        {
+            let matched : Bool = self.match(result!)
             
-            if (result != nil)
+            if (matched)
             {
-                let matched : Bool = self.match(result!)
-                
-                if (matched)
-                {
-                    cachedValue = result
-                }
-                else
-                {
-                    result = nil
-                }
+                cachedValue = result
             }
-            
-            return result
+            else
+            {
+                result = nil
+            }
+        }
+        
+        return result
     }
     
-    /**
-    * Prefix-Plate number
-    */
-    var prefix  : String?
+    var prefix : String?
     {
-            return nil;
+        var result : String? = cachedValue
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.startIndex, 2)
+            
+            result = full.substringToIndex(index)
+        }
+        
+        return result
     }
-    /**
-    * Suffix-Plate number
-    */
-    var suffix  : String?
+    
+    var suffix : String?
     {
-            return nil;
+        var result : String? = cachedValue
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.endIndex, -2)
+            
+            result = full.substringFromIndex(index)
+        }
+        
+        return result
     }
-    /**
-    * Body-Plate number
-    */
-    var body  : String?
+    
+    var body : String?
     {
-        return cachedValue
+        var result : String? = cachedValue
+        
+        if let full = result
+        {
+            result = full.substringWithRange(Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.endIndex, -2)))
+        }
+        
+        return result
     }
+    
     
     func normalizedInput() -> String
     {

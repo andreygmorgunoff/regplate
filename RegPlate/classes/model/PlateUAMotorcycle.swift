@@ -17,6 +17,51 @@ class PlateUAMotorcycle04 : PlateUAMoto04
         type = PlateUAConstants.PlateTypes.Motorcycle_04
     }
     
+    override var body : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let range = Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.startIndex, 6))
+            
+            result = full.substringWithRange(range)
+        }
+        
+        return result
+    }
+    
+    override var suffix : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.endIndex, -2)
+            
+            result = full.substringFromIndex(index)
+        }
+        
+        return result
+    }
+    
+    override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    {
+        var result : PlateTemplatableCharType?
+        
+        switch (index)
+        {
+        case 0, 1, 6, 7:
+            result = PlateTemplatableCharType.Letter
+        case 2, 3, 4, 5:
+            result = PlateTemplatableCharType.Num
+        default:
+            result = nil
+        }
+        
+        return result
+    }
+
     /**
     * Plate engine type
     */

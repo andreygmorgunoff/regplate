@@ -17,15 +17,15 @@ class PlateUAMoto04 : PlateUAAuto04
         type = PlateUAConstants.PlateTypes.Motorbike_04
     }
     
-    override var prefix : String?
+    override var body : String?
     {
         var result : String? = super.value
         
         if let full = result
         {
-            let index : String.Index = advance(full.startIndex, 2)
+            let range = Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.startIndex, 4))
             
-            result = full.substringToIndex(index)
+            result = full.substringWithRange(range)
         }
         
         return result
@@ -37,7 +37,7 @@ class PlateUAMoto04 : PlateUAAuto04
         
         if let full = result
         {
-            let index : String.Index = advance(full.endIndex, -2)
+            let index : String.Index = advance(full.endIndex, -4)
             
             result = full.substringFromIndex(index)
         }
@@ -45,17 +45,6 @@ class PlateUAMoto04 : PlateUAAuto04
         return result
     }
     
-    override var body : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            result = full.substringWithRange(Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.endIndex, -2)))
-        }
-        
-        return result
-    }
     
     /**
     * Plate engine type
@@ -63,6 +52,23 @@ class PlateUAMoto04 : PlateUAAuto04
     override var engineType : PlateUAConstants.PlateEngineType
     {
         return PlateUAConstants.PlateEngineType.LessThen50
+    }
+    
+    override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    {
+        var result : PlateTemplatableCharType?
+        
+        switch (index)
+        {
+        case 4, 5, 6, 7:
+            result = PlateTemplatableCharType.Num
+        case 0, 1, 2, 3:
+            result = PlateTemplatableCharType.Letter
+        default:
+            result = nil
+        }
+        
+        return result
     }
 }
 

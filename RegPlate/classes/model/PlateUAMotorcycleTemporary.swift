@@ -17,6 +17,66 @@ class PlateUAMotorcycleTemporary04 : PlateUAMotoTemporary04
         type = PlateUAConstants.PlateTypes.Motorcycle_Temporary_04
     }
     
+    override class func regexp() -> String?
+    {
+        let unknownLetter = "\\" + self.unknownLetterChar()
+        let unknownNumber = "\\" + self.unknownNumChar()
+        
+        return
+                "([\\d\(unknownNumber)]{2})" +
+                "([\\d\(unknownNumber)]{4})" +
+                "(\(PlateUA.tails)" +
+                "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
+                "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
+                "|\(unknownLetter)\(unknownLetter))"
+    }
+    
+
+    override var body : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let range = Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.startIndex, 6))
+            
+            result = full.substringWithRange(range)
+        }
+        
+        return result
+    }
+    
+    override var suffix : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.endIndex, -2)
+            
+            result = full.substringFromIndex(index)
+        }
+        
+        return result
+    }
+    
+    override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    {
+        var result : PlateTemplatableCharType?
+        
+        switch (index)
+        {
+        case 0, 1, 2, 3, 4, 5:
+            result = PlateTemplatableCharType.Num
+        case 6, 7:
+            result = PlateTemplatableCharType.Letter
+        default:
+            result = nil
+        }
+        
+        return result
+    }
+    
     /**
     * Plate engine type
     */

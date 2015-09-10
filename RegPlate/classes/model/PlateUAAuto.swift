@@ -107,46 +107,6 @@ class PlateUAAutoUsaJapan04 : PlateUAAuto04
         type = PlateUAConstants.PlateTypes.USA_Japan_04
     }
     
-    override var prefix : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            let index : String.Index = advance(full.startIndex, 2)
-            
-            result = full.substringToIndex(index)
-        }
-        
-        return result
-    }
-    
-    override var suffix : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            let index : String.Index = advance(full.endIndex, -2)
-            
-            result = full.substringFromIndex(index)
-        }
-        
-        return result
-    }
-    
-    override var body : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            result = full.substringWithRange(Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.endIndex, -2)))
-        }
-        
-        return result
-    }
-    
     /**
     * Plate country type
     */

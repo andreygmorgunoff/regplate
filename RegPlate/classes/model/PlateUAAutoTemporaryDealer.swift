@@ -23,7 +23,6 @@ class PlateUAAutoTemporaryDealer04 : PlateUAAutoTemporary04
         let unknownNumber = "\\" + self.unknownNumChar()
         
         return
-//            "([\(PlateUA.allSymbols)\(unknownLetter)]" +
             "([T\(unknownLetter)]" +
             "[\\d\(unknownNumber)])" +
             "(\(PlateUA.tails)" +
@@ -31,34 +30,6 @@ class PlateUAAutoTemporaryDealer04 : PlateUAAutoTemporary04
             "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
             "|\(unknownLetter)\(unknownLetter))" +
             "([\\d\(unknownNumber)]{4})"
-    }
-    
-    override var suffix : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            let index : String.Index = advance(full.startIndex, 2)
-            
-            result = full.substringFromIndex(index)
-        }
-        
-        return result
-    }
-    
-    override var prefix : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            let index : String.Index = advance(full.startIndex, 2)
-            
-            result = full.substringToIndex(index)
-        }
-        
-        return result
     }
     
     override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
