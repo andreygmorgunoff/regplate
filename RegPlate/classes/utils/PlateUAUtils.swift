@@ -76,14 +76,14 @@ struct PlateUAUtils : Plates
         {
             result.append(plate)
         }
-/* 
+ 
         // 3.1 (2015)
         plate = PlateUAMoto15(input: input)
         if let value = plate.value
         {
             result.append(plate)
         }
-*/
+
         // 3.2 (2004)
         plate = PlateUAMotoTemporary04(input: input)
         if let value = plate.value
@@ -168,6 +168,20 @@ struct PlateUAUtils : Plates
             result.append(plate)
         }
         
+        // 11 (2004)
+        plate = PlateUAAutoPolice04(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+        
+        // 11 (2015)
+        plate = PlateUAAutoPolice15(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+
         return result
     }
     

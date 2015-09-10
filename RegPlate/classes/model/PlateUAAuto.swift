@@ -23,7 +23,7 @@ class PlateUAAuto04 : PlateUA, PlateTemplatable
     {
         var result = input
         
-        for var index = count(self.input); index < PlateUAAuto04.kMaxLength; index++
+        for var index = count(self.input); index < self.dynamicType.maxLength(); index++
         {
             if let charType = self.dynamicType.charTypeForCharIndex(index)
             {
@@ -70,6 +70,11 @@ class PlateUAAuto04 : PlateUA, PlateTemplatable
         return "*"
     }
     
+    class func maxLength() -> Int
+    {
+        return kMaxLength
+    }
+
     class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
     {
         var result : PlateTemplatableCharType?

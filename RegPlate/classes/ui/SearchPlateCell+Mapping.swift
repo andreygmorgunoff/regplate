@@ -93,6 +93,8 @@ extension SearchPlateCell
             || plate is PlateUAMotoTemporaryDealer04
             || plate is PlateUAMotorcycleTemporary04
             || plate is PlateUAMotorcycleTemporaryDealer04
+            || plate is PlateUAAutoPolice04
+            || plate is PlateUAAutoPolice15
             )
         {
             result = UIColor.whiteColor()

@@ -40,6 +40,8 @@ protocol PlateTemplatable
     static func unknownLetterChar() -> String
     
     static func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    
+    static func maxLength() -> Int
 }
 
 protocol Plates

@@ -14,7 +14,12 @@ struct PlateUAUIUtils
     {
         var cellIdentifier = "searchPlateCellIdentifier"
         
-        if (plate is PlateUAAutoUsaJapan04)
+        if (plate is PlateUAAutoPolice04
+            || plate is PlateUAAutoPolice15)
+        {
+            cellIdentifier = "searchPlateCellIdentifier6"
+        }
+        else if (plate is PlateUAAutoUsaJapan04)
         {
             cellIdentifier = "searchPlateCellIdentifier5"
         }
