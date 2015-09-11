@@ -233,7 +233,9 @@ struct PlateUAUtils : Plates
             
             case
             PlateUAConstants.PlateTypes.USA_Japan_04,
-            PlateUAConstants.PlateTypes.USA_Japan_15 :
+            PlateUAConstants.PlateTypes.USA_Japan_15,
+            PlateUAConstants.PlateTypes.Police_04,
+            PlateUAConstants.PlateTypes.Police_15 :
                 
                 result.insert(PlateUAConstants.AutoTypes.Car)
                 result.insert(PlateUAConstants.AutoTypes.Bus)

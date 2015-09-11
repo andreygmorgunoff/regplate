@@ -60,13 +60,21 @@ class PlateUAAutoPolice04 : PlateUAAuto04
         
         switch (index)
         {
-        case 0-6:
+        case 0...6:
             result = PlateTemplatableCharType.Num
         default:
             result = nil
         }
         
         return result
+    }
+    
+    /**
+    * Plate own type
+    */
+    override var ownType : PlateUAConstants.PlateOwnType
+    {
+        return PlateUAConstants.PlateOwnType.Milicia
     }
 }
 
