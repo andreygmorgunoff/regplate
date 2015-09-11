@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4FE57F5D-2426-48E5-93B0-AD67BB45DDDF</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>RegPlate</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BABE7B9AD2A65C1CDEF0AC0F7189A956E5870135</key>
 		<string>https://github.com/andreygmorgunoff/regplate.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RegPlate.xcodeproj/project.xcworkspace</string>
+	<string>RegPlate.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BABE7B9AD2A65C1CDEF0AC0F7189A956E5870135</key>

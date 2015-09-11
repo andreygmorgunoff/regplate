@@ -112,6 +112,13 @@ struct PlateUAUtils : Plates
             result.append(plate)
         }
         
+        // 4 (2004 - 2013)
+        plate = PlateUAAutoDiplomatic04_13(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+        
         // 5 (2004)
         plate = PlateUAMotorcycle04(input: input)
         if let value = plate.value
@@ -235,7 +242,9 @@ struct PlateUAUtils : Plates
             PlateUAConstants.PlateTypes.USA_Japan_04,
             PlateUAConstants.PlateTypes.USA_Japan_15,
             PlateUAConstants.PlateTypes.Police_04,
-            PlateUAConstants.PlateTypes.Police_15 :
+            PlateUAConstants.PlateTypes.Police_15,
+            PlateUAConstants.PlateTypes.Diplomatic
+                :
                 
                 result.insert(PlateUAConstants.AutoTypes.Car)
                 result.insert(PlateUAConstants.AutoTypes.Bus)
