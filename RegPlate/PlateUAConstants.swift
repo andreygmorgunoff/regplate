@@ -283,4 +283,111 @@ class PlateUAConstants
         }
         
     }
+    
+    enum PlateRegions04 : String, Printable
+    {
+        case Unknown = "00"
+        case o1 = "01"
+        case o2 = "02"
+        case o3 = "03"
+        case o4 = "04"
+        case o5 = "05"
+        case o6 = "06"
+        case o7 = "07"
+        case o8 = "08"
+        case o9 = "09"
+        case o10 = "10"
+        case o11 = "11"
+        case o12 = "12"
+        case o13 = "13"
+        case o14 = "14"
+        case o15 = "15"
+        case o16 = "16"
+        case o17 = "17"
+        case o18 = "18"
+        case o19 = "19"
+        case o20 = "20"
+        case o21 = "21"
+        case o22 = "22"
+        case o23 = "23"
+        case o24 = "24"
+        case o25 = "25"
+        case o26 = "26"
+        case o27 = "27"
+        case o28 = "28"
+        
+        var description: String
+        {
+            return self.rawValue
+        }
+        
+        var region: String?
+        {
+            var result : String?
+            
+            switch (self)
+            {
+            case .o1 :
+                result = NSLocalizedString("Krym", comment: "Krym")
+            case .o2 :
+                result = NSLocalizedString("Vinnitska", comment: "Vinnitska")
+            case .o3 :
+                result = NSLocalizedString("Volynska", comment: "Volynska")
+            case .o4 :
+                result = NSLocalizedString("Dniprovska", comment: "Dniprovska")
+            case .o5 :
+                result = NSLocalizedString("Donetska", comment: "Donetska")
+            case .o6 :
+                result = NSLocalizedString("Zhitomirska", comment: "Zhitomirska")
+            case .o7 :
+                result = NSLocalizedString("Zakarpatska", comment: "Zakarpatska")
+            case .o8 :
+                result = NSLocalizedString("Zaporizhska", comment: "Zaporizhska")
+            case .o9 :
+                result = NSLocalizedString("IvanoFrankivska", comment: "IvanoFrankivska")
+            case .o10 :
+                result = NSLocalizedString("Kyivska", comment: "Kyivska")
+            case .o11 :
+                result = NSLocalizedString("Kyiv", comment: "Kyiv")
+            case .o12 :
+                result = NSLocalizedString("Kirovogradska", comment: "Kirovogradska")
+            case .o13 :
+                result = NSLocalizedString("Luganska", comment: "Luganska")
+            case .o14 :
+                result = NSLocalizedString("Lvivska", comment: "Lvivska")
+            case .o15 :
+                result = NSLocalizedString("Mykolaivska", comment: "Mykolaivska")
+            case .o16 :
+                result = NSLocalizedString("Odeska", comment: "Odeska")
+            case .o17 :
+                result = NSLocalizedString("Poltavska", comment: "Poltavska")
+            case .o18 :
+                result = NSLocalizedString("Rivnenska", comment: "Rivnenska")
+            case .o19 :
+                result = NSLocalizedString("Sumska", comment: "Sumska")
+            case .o20 :
+                result = NSLocalizedString("Ternopilska", comment: "Ternopilska")
+            case .o21 :
+                result = NSLocalizedString("Kharkivska", comment: "Kharkivska")
+            case .o22 :
+                result = NSLocalizedString("Khersonska", comment: "Khersonska")
+            case .o23 :
+                result = NSLocalizedString("Khmelnitska", comment: "Khmelnitska")
+            case .o24 :
+                result = NSLocalizedString("Cherkaska", comment: "Cherkaska")
+            case .o25 :
+                result = NSLocalizedString("Chernigivska", comment: "Chernigivska")
+            case .o26 :
+                result = NSLocalizedString("Charnivetska", comment: "Charnivetska")
+            case .o27 :
+                result = NSLocalizedString("Sevastopol", comment: "Sevastopol")
+            case .o28 :
+                result = NSLocalizedString("General", comment: "General")
+            default :
+                result = nil
+            }
+            
+            return result
+        }
+    }
 }
