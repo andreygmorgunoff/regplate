@@ -390,4 +390,184 @@ class PlateUAConstants
             return result
         }
     }
+
+    enum PlateDiplomaticArea : Int, Printable
+    {
+        case Unknown = 0,
+        Russia = 1,
+        USA,
+        China,
+        UnitedKingdom,
+        France,
+        Germany,
+        Hungary,
+        Lithuania,
+        Bulgaria,
+        Armenia,
+        Australia,
+        Israel,
+        Belarus,
+        Poland,
+        Estonia,
+        Reserve,
+        Sweden,
+        Mexico,
+        Greece,
+        India,
+        Iran,
+        Mongolia,
+        Vietnam,
+        Austria,
+        Egypt,
+        Argentina,
+        Japan,
+        Canada,
+        Portugal,
+        Chile,
+        Italy,
+        Spain,
+        Slovakia,
+        Romania,
+        Turkey,
+        Norway,
+        Algeria,
+        Switzerland,
+        Niger,
+        Vatican,
+        Azerbaijan,
+        RepublicOfKorea,
+        Brazil,
+        Denmark,
+        Latvia,
+        Croatia,
+        Cyprus,
+        CzechRepublic,
+        Finland,
+        Seychelles,
+        UN,
+        CAR,
+        Slovenia,
+        Belgium,
+        Moldova,
+        Cuba,
+        Philippines,
+        SouthAfrica,
+        Pakistan,
+        Libya,
+        IBRD,
+        IFC,
+        Syria,
+        Singapore,
+        Ireland,
+        Netherlands,
+        Kazakhstan,
+        Georgia,
+        Iraq,
+        Kyrgyzstan,
+        Tajikistan,
+        Uzbekistan,
+        Turkmenistan,
+        Thailand,
+        Tunisia,
+        Ghana,
+        Serbia,
+        Liechtenstein,
+        Indonesia,
+        Morocco,
+        Jordan,
+        BackupCode
+        Luxembourg,
+        OSCE,
+        Uruguay,
+        Peru,
+        RedCross,
+        Afghanistan,
+        STCU,
+        Yugoslavia,
+        Albania,
+        Macedonia,
+        NATO,
+        NATOInformationCenter,
+        IMF,
+        NewZealand,
+        Bangladesh,
+        EU,
+        EBRD,
+        GDIPServiceSet,
+        OSCE
+        
+        var description: String
+        {
+            return self.rawValue
+        }
+        
+        var region: String?
+            {
+                var result : String?
+                
+                switch (self)
+                {
+                case .o1 :
+                    result = NSLocalizedString("Krym", comment: "Krym")
+                case .o2 :
+                    result = NSLocalizedString("Vinnitska", comment: "Vinnitska")
+                case .o3 :
+                    result = NSLocalizedString("Volynska", comment: "Volynska")
+                case .o4 :
+                    result = NSLocalizedString("Dniprovska", comment: "Dniprovska")
+                case .o5 :
+                    result = NSLocalizedString("Donetska", comment: "Donetska")
+                case .o6 :
+                    result = NSLocalizedString("Zhitomirska", comment: "Zhitomirska")
+                case .o7 :
+                    result = NSLocalizedString("Zakarpatska", comment: "Zakarpatska")
+                case .o8 :
+                    result = NSLocalizedString("Zaporizhska", comment: "Zaporizhska")
+                case .o9 :
+                    result = NSLocalizedString("IvanoFrankivska", comment: "IvanoFrankivska")
+                case .o10 :
+                    result = NSLocalizedString("Kyivska", comment: "Kyivska")
+                case .o11 :
+                    result = NSLocalizedString("Kyiv", comment: "Kyiv")
+                case .o12 :
+                    result = NSLocalizedString("Kirovogradska", comment: "Kirovogradska")
+                case .o13 :
+                    result = NSLocalizedString("Luganska", comment: "Luganska")
+                case .o14 :
+                    result = NSLocalizedString("Lvivska", comment: "Lvivska")
+                case .o15 :
+                    result = NSLocalizedString("Mykolaivska", comment: "Mykolaivska")
+                case .o16 :
+                    result = NSLocalizedString("Odeska", comment: "Odeska")
+                case .o17 :
+                    result = NSLocalizedString("Poltavska", comment: "Poltavska")
+                case .o18 :
+                    result = NSLocalizedString("Rivnenska", comment: "Rivnenska")
+                case .o19 :
+                    result = NSLocalizedString("Sumska", comment: "Sumska")
+                case .o20 :
+                    result = NSLocalizedString("Ternopilska", comment: "Ternopilska")
+                case .o21 :
+                    result = NSLocalizedString("Kharkivska", comment: "Kharkivska")
+                case .o22 :
+                    result = NSLocalizedString("Khersonska", comment: "Khersonska")
+                case .o23 :
+                    result = NSLocalizedString("Khmelnitska", comment: "Khmelnitska")
+                case .o24 :
+                    result = NSLocalizedString("Cherkaska", comment: "Cherkaska")
+                case .o25 :
+                    result = NSLocalizedString("Chernigivska", comment: "Chernigivska")
+                case .o26 :
+                    result = NSLocalizedString("Charnivetska", comment: "Charnivetska")
+                case .o27 :
+                    result = NSLocalizedString("Sevastopol", comment: "Sevastopol")
+                case .o28 :
+                    result = NSLocalizedString("General", comment: "General")
+                default :
+                    result = nil
+                }
+                
+                return result
+        }
+    }
 }
