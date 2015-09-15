@@ -23,12 +23,12 @@ class PlateUAAutoTemporary04 : PlateUAAuto04
         let unknownNumber = "\\" + self.unknownNumChar()
         
         return
-            "([\\d\(unknownNumber)]{2})" +
+            "(^[\\d\(unknownNumber)]{2})" +
             "(\(PlateUA.tails)" +
             "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
             "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
             "|\(unknownLetter)\(unknownLetter))" +
-            "([\\d\(unknownNumber)]{4})"
+            "([\\d\(unknownNumber)]{4})$"
     }
     
     override var body : String?

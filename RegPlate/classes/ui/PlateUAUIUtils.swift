@@ -14,7 +14,17 @@ struct PlateUAUIUtils
     {
         var cellIdentifier = "searchPlateCellIdentifier"
         
-        if (plate is PlateUAAutoDiplomatic04_13)
+        if (plate is PlateUAAutoArmy95)
+        {
+            cellIdentifier = "searchPlateCellIdentifier9"
+        }
+        else if (plate is PlateUAAutoDiplomatic13_CDP)
+        {
+            cellIdentifier = "searchPlateCellIdentifier8"
+        }
+        else if (plate is PlateUAAutoDiplomatic04_13
+            || plate is PlateUAAutoDiplomatic13_S
+            || plate is PlateUAAutoDiplomatic13_DP)
         {
             cellIdentifier = "searchPlateCellIdentifier7"
         }

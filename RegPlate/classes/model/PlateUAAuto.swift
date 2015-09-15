@@ -49,7 +49,7 @@ class PlateUAAuto04 : PlateUA, PlateTemplatable
         let unknownLetter = "\\" + self.unknownLetterChar()
         let unknownNumber = "\\" + self.unknownNumChar()
         
-        return "(\(PlateUA.series)" +
+        return "(^\(PlateUA.series)" +
                "|[\(PlateUA.prefixSeries)]\(unknownLetter)" +
                "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
                "|\(unknownLetter)\(unknownLetter))" +
@@ -57,7 +57,7 @@ class PlateUAAuto04 : PlateUA, PlateTemplatable
                "(\(PlateUA.tails)" +
                "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
                "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
-               "|\(unknownLetter)\(unknownLetter))"
+               "|\(unknownLetter)\(unknownLetter))$"
     }
     
     class func unknownNumChar() -> String

@@ -118,7 +118,28 @@ struct PlateUAUtils : Plates
         {
             result.append(plate)
         }
-        
+
+        // 4 (2013-)
+        plate = PlateUAAutoDiplomatic13_CDP(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+
+        // 4 (2013-)
+        plate = PlateUAAutoDiplomatic13_DP(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+
+        // 4 (2013-)
+        plate = PlateUAAutoDiplomatic13_S(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+
         // 5 (2004)
         plate = PlateUAMotorcycle04(input: input)
         if let value = plate.value
@@ -170,6 +191,13 @@ struct PlateUAUtils : Plates
         
         // 7.3 (2015)
         plate = PlateUAAutoUsaJapan15(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+        
+        // 9 (1995)
+        plate = PlateUAAutoArmy95(input: input)
         if let value = plate.value
         {
             result.append(plate)
@@ -249,6 +277,16 @@ struct PlateUAUtils : Plates
                 result.insert(PlateUAConstants.AutoTypes.Car)
                 result.insert(PlateUAConstants.AutoTypes.Bus)
                 result.insert(PlateUAConstants.AutoTypes.Track)
+            
+            case
+            PlateUAConstants.PlateTypes.Army_95
+                :
+                result.insert(PlateUAConstants.AutoTypes.Car)
+                result.insert(PlateUAConstants.AutoTypes.Bus)
+                result.insert(PlateUAConstants.AutoTypes.Track)
+                result.insert(PlateUAConstants.AutoTypes.Trailer)
+                result.insert(PlateUAConstants.AutoTypes.Tracktor)
+
             
             default :
                 

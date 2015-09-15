@@ -8,13 +8,13 @@
 
 import Foundation
 
-class PlateUAMotorcycleTemporaryDealer04 : PlateUAMotoTemporaryDealer04
+class PlateUAAutoArmy95 : PlateUAAutoPolice04
 {
     required init(input: String)
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Motorcycle_Trade_Temporary_04
+        type = PlateUAConstants.PlateTypes.Army_95
     }
     
     override class func regexp() -> String?
@@ -23,13 +23,11 @@ class PlateUAMotorcycleTemporaryDealer04 : PlateUAMotoTemporaryDealer04
         let unknownNumber = "\\" + self.unknownNumChar()
         
         return
-                "(^[T\(unknownLetter)]" +
-                "[\\d\(unknownNumber)])" +
-                "([\\d\(unknownNumber)]{4})" +
-                "(\(PlateUA.tails)" +
-                "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
-                "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
-                "|\(unknownLetter)\(unknownLetter))$"
+            "^([\\d\(unknownNumber)]{4})" +
+            "([ABEKHPCT\(unknownLetter)]" +
+            "|[IMOX\(unknownLetter)]" +
+            "|[БИП\(unknownLetter)])" +
+            "([\\d\(unknownNumber)])$"
     }
     
     override var body : String?
@@ -38,7 +36,7 @@ class PlateUAMotorcycleTemporaryDealer04 : PlateUAMotoTemporaryDealer04
         
         if let full = result
         {
-            let range = Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.startIndex, 6))
+            let range = Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.startIndex, 4))
             
             result = full.substringWithRange(range)
         }
@@ -46,6 +44,20 @@ class PlateUAMotorcycleTemporaryDealer04 : PlateUAMotoTemporaryDealer04
         return result
     }
     
+    override var prefix : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.startIndex, 2)
+            
+            result = full.substringToIndex(index)
+        }
+        
+        return result
+    }
+
     override var suffix : String?
     {
         var result : String? = super.value
@@ -66,9 +78,9 @@ class PlateUAMotorcycleTemporaryDealer04 : PlateUAMotoTemporaryDealer04
         
         switch (index)
         {
-        case 1, 2, 3, 4, 5:
+        case 0, 1, 2, 3, 5:
             result = PlateTemplatableCharType.Num
-        case 0, 6, 7:
+        case 4:
             result = PlateTemplatableCharType.Letter
         default:
             result = nil
@@ -82,24 +94,7 @@ class PlateUAMotorcycleTemporaryDealer04 : PlateUAMotoTemporaryDealer04
     */
     override var ownType : PlateUAConstants.PlateOwnType
     {
-        return PlateUAConstants.PlateOwnType.TradeDialer
-    }
-    
-    /**
-    * Plate engine type
-    */
-    override var engineType : PlateUAConstants.PlateEngineType
-    {
-        return PlateUAConstants.PlateEngineType.MoreThen50
+        return PlateUAConstants.PlateOwnType.Army
     }
 }
 
-class PlateUAMotorcycleTemporaryDealer15 : PlateUAMotorcycleTemporaryDealer04
-{
-    required init(input: String)
-    {
-        super.init(input: input)
-        
-        type = PlateUAConstants.PlateTypes.Motorcycle_Trade_Temporary_15
-    }
-}

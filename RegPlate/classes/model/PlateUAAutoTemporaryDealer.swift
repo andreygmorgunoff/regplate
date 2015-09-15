@@ -23,13 +23,13 @@ class PlateUAAutoTemporaryDealer04 : PlateUAAutoTemporary04
         let unknownNumber = "\\" + self.unknownNumChar()
         
         return
-            "([T\(unknownLetter)]" +
+            "(^[T\(unknownLetter)]" +
             "[\\d\(unknownNumber)])" +
             "(\(PlateUA.tails)" +
             "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
             "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
             "|\(unknownLetter)\(unknownLetter))" +
-            "([\\d\(unknownNumber)]{4})"
+            "([\\d\(unknownNumber)]{4})$"
     }
     
     override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?

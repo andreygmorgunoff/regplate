@@ -23,12 +23,12 @@ class PlateUAMotorcycleTemporary04 : PlateUAMotoTemporary04
         let unknownNumber = "\\" + self.unknownNumChar()
         
         return
-                "([\\d\(unknownNumber)]{2})" +
+                "(^[\\d\(unknownNumber)]{2})" +
                 "([\\d\(unknownNumber)]{4})" +
                 "(\(PlateUA.tails)" +
                 "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
                 "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
-                "|\(unknownLetter)\(unknownLetter))"
+                "|\(unknownLetter)\(unknownLetter))$"
     }
     
 
