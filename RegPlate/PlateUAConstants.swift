@@ -107,7 +107,7 @@ class PlateUAConstants
         case Army_Volonter_14 = "9.1.14"
         
         // 10
-        case Army_Tractor_95 = "10..95"
+        case Army_Moto_95 = "10..95"
         
         // 11
         case Police_04 = "11..04"

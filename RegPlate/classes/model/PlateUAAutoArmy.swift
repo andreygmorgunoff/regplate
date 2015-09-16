@@ -103,3 +103,13 @@ class PlateUAAutoArmy95 : PlateUAAutoPolice04
     }
 }
 
+class PlateUAAutoArmyMoto95 : PlateUAAutoArmy95
+{
+    required init(input: String)
+    {
+        super.init(input: input)
+        
+        type = PlateUAConstants.PlateTypes.Army_Moto_95
+    }
+}
+
