@@ -98,7 +98,8 @@ class PlateUAConstants
         case USA_Japan_Individual_04 = "7.4.04"
         
         // 8
-        case Tractor_04 = "8..04"
+        case Tractor_95 = "8.1.95"
+        case Tractor_Temporary_13 = "8.2.13"
         
         // 9
         case Army_95 = "9..95"

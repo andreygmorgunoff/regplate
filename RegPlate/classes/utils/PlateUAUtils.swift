@@ -195,6 +195,20 @@ struct PlateUAUtils : Plates
         {
             result.append(plate)
         }
+
+        // 8 (1995)
+        plate = PlateUAAutoTracktor95(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+        
+        // 8 (2013)
+        plate = PlateUAAutoTracktorTemporary13(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
         
         // 9 (1995)
         plate = PlateUAAutoArmy95(input: input)
@@ -298,6 +312,13 @@ struct PlateUAUtils : Plates
                 :
                 result.insert(PlateUAConstants.AutoTypes.Moto)
                 result.insert(PlateUAConstants.AutoTypes.Trailer)
+
+            case
+            PlateUAConstants.PlateTypes.Tractor_95,
+            PlateUAConstants.PlateTypes.Tractor_Temporary_13
+                :
+                result.insert(PlateUAConstants.AutoTypes.Tracktor)
+                result.insert(PlateUAConstants.AutoTypes.Trailer)
             
             default :
                 
@@ -313,9 +334,6 @@ struct PlateUAUtils : Plates
 //            
 //            // 7.4
 //        case USA_Japan_Individual_04 = "7.4.04"
-//            
-//            // 8
-//        case Tractor_04 = "8..04"
 //            
 //            // 9.1
 //        case Army_Volonter_14 = "9.1.14"

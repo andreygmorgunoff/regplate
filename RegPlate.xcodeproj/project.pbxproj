@@ -60,6 +60,7 @@
 		5FF77BB51B85FD3F00DCA2A4 /* PlateUA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B991B85B03B00DCA2A4 /* PlateUA.swift */; };
 		5FF77BB61B85FD4D00DCA2A4 /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B971B85AF8D00DCA2A4 /* Plate.swift */; };
 		5FF77BB71B85FD4F00DCA2A4 /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */; };
+		EE49CCF31BA9F80300249D11 /* PlateUAAutoTracktor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		5FF77B991B85B03B00DCA2A4 /* PlateUA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUA.swift; path = classes/model/PlateUA.swift; sourceTree = "<group>"; };
 		5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegExp.swift; path = classes/utils/RegExp.swift; sourceTree = "<group>"; };
 		5FF77BA01B85D4A500DCA2A4 /* PlateUAAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAuto.swift; path = classes/model/PlateUAAuto.swift; sourceTree = "<group>"; };
+		EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTracktor.swift; path = classes/model/PlateUAAutoTracktor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */,
 				5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */,
 				5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */,
+				EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */,
 				5FC109B01B8F103700FB080B /* PlateUAConstants.swift */,
 			);
 			name = Model;
@@ -352,6 +355,7 @@
 				5F23F9521B834EE600E221D1 /* AppDelegate.swift in Sources */,
 				5F3209B31B96FB680058C193 /* PlateUAAutoTemporary.swift in Sources */,
 				5F23F9551B834EE600E221D1 /* RegPlate.xcdatamodeld in Sources */,
+				EE49CCF31BA9F80300249D11 /* PlateUAAutoTracktor.swift in Sources */,
 				5FA1C9511BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */,
 				5FA1C94E1BA1625100E8E8EB /* PlateUAUIUtils.swift in Sources */,
 				5FF77B981B85AF8D00DCA2A4 /* Plate.swift in Sources */,
