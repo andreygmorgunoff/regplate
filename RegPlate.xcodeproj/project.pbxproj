@@ -61,6 +61,7 @@
 		5FF77BB61B85FD4D00DCA2A4 /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B971B85AF8D00DCA2A4 /* Plate.swift */; };
 		5FF77BB71B85FD4F00DCA2A4 /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */; };
 		EE49CCF31BA9F80300249D11 /* PlateUAAutoTracktor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */; };
+		EE49CCF41BA9FF1C00249D11 /* PlateUAAutoTracktor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,6 +383,7 @@
 				5FA1C9571BA1B7E800E8E8EB /* PlateUAAutoPolice.swift in Sources */,
 				5FE8CB2C1BA85F63005D4866 /* PlateUAAutoArmy.swift in Sources */,
 				5F8DDC3E1B9EF36D00294323 /* PlateUAAutoTests.swift in Sources */,
+				EE49CCF41BA9FF1C00249D11 /* PlateUAAutoTracktor.swift in Sources */,
 				5F3209AE1B90AD320058C193 /* PlateUAUtilsTests.swift in Sources */,
 				5FA1C9541BA164BF00E8E8EB /* SearchViewController.swift in Sources */,
 				5FF77BB41B85FD3C00DCA2A4 /* PlateUAAuto.swift in Sources */,
