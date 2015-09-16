@@ -303,21 +303,6 @@ struct PlateUAUtils : Plates
                 
                 ()
 //
-//            // 4
-//        case Diplomatic = "4..04"
-//            
-//            // 5
-//        case Motorcycle_04 = "5..04"
-//        case Motorcycle_15 = "5..15"
-//            
-//            // 6.1
-//        case Motorcycle_Temporary_04 = "6.1.04"
-//        case Motorcycle_Temporary_15 = "6.1.15"
-//            
-//            // 6.2
-//        case Motorcycle_Trade_Temporary_04 = "6.2.04"
-//        case Motorcycle_Trade_Temporary_15 = "6.2.15"
-//            
 //            // 7.1
 //        case Auto_Individual_04 = "7.1.04"
 //        case Auto_Individual_04_2 = "7.1.04.2"
@@ -326,28 +311,14 @@ struct PlateUAUtils : Plates
 //        case Motorcycle_Individual_04 = "7.2.04"
 //        case Motorcycle_Individual_04_2 = "7.2.04.2"
 //            
-//            // 7.3
-//        case USA_Japan_04 = "7.3.04"
-//        case USA_Japan_15 = "7.3.15"
-//            
 //            // 7.4
 //        case USA_Japan_Individual_04 = "7.4.04"
 //            
 //            // 8
 //        case Tractor_04 = "8..04"
 //            
-//            // 9
-//        case Army_95 = "9..95"
-//            
 //            // 9.1
 //        case Army_Volonter_14 = "9.1.14"
-//            
-//            // 10
-//        case Army_Tractor_95 = "10..95"
-//            
-//            // 11
-//        case Police_04 = "11..04"
-//        case Police_15 = "11..15"
 //            
 //            // 12.1
 //        case Specific_10 = "12.1.10"
