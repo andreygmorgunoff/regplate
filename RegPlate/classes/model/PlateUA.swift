@@ -120,6 +120,24 @@ class PlateUA : PlateUAProtocol
         return result
     }
     
+    func region04() -> PlateUAConstants.PlateRegions04?
+    {
+        var result : PlateUAConstants.PlateRegions04? = nil;
+        
+        let number : String = self.input
+        
+        if (count(number) > 1)
+        {
+            let index : String.Index = advance(number.startIndex, 2)
+            
+            let regionStr : String = number.substringToIndex(index)
+            
+            result = PlateUAConstants.PlateRegions04(rawValue: regionStr)
+        }
+        
+        return result
+    }
+    
     func region() -> PlateUAConstants.PlateRegions?
     {
         var result : PlateUAConstants.PlateRegions? = nil;

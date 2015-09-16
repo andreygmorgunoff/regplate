@@ -96,5 +96,10 @@ class PlateUAAutoArmy95 : PlateUAAutoPolice04
     {
         return PlateUAConstants.PlateOwnType.Army
     }
+    
+    override var area  : String?
+    {
+        return ""
+    }
 }
 

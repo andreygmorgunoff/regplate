@@ -27,7 +27,9 @@ class PlateUAAutoDiplomatic04_13 : PlateUAAuto04
         
         return
             "(^[D\(unknownLetter)])" +
-            "([\\d\(unknownNumber)]{3})" +
+                "(([0\(unknownNumber)][0123456789\(unknownNumber)]{2})" +
+                "|([1\(unknownNumber)][0\(unknownNumber)]{2})" +
+                "|([2\(unknownNumber)][0\(unknownNumber)][6\(unknownNumber)]))" +
             "([\\d\(unknownNumber)]{3})$"
     }
     
@@ -110,6 +112,33 @@ class PlateUAAutoDiplomatic04_13 : PlateUAAuto04
         
         return result
     }
+    
+    func country() -> PlateUAConstants.PlateDiplomaticArea?
+    {
+        var result : PlateUAConstants.PlateDiplomaticArea? = nil;
+        
+        if let countryStr = self.body
+        {
+            if let coutryNum = countryStr.toInt()
+            {
+                result = PlateUAConstants.PlateDiplomaticArea(rawValue: coutryNum)
+            }
+        }
+        
+        return result
+    }
+    
+    override var area  : String?
+    {
+        var result : String?
+        
+        if let country = country()
+        {
+            result = "\(country.region!)"
+        }
+        
+        return result
+    }
 }
 
 /* 1 Jul 2013 - */
@@ -124,7 +153,9 @@ class PlateUAAutoDiplomatic13_DP : PlateUAAutoDiplomatic04_13
         
         return
             "(^[D\(unknownLetter)][P\(unknownLetter)])" +
-            "([\\d\(unknownNumber)]{3})" +
+                "(([0\(unknownNumber)][0123456789\(unknownNumber)]{2})" +
+                "|([1\(unknownNumber)][0\(unknownNumber)]{2})" +
+                "|([2\(unknownNumber)][0\(unknownNumber)][6\(unknownNumber)]))" +
             "([\\d\(unknownNumber)]{3})$"
     }
     
@@ -196,7 +227,9 @@ class PlateUAAutoDiplomatic13_S : PlateUAAutoDiplomatic04_13
         
         return
             "(^[S\(unknownLetter)])" +
-            "([\\d\(unknownNumber)]{3})" +
+                "(([0\(unknownNumber)][0123456789\(unknownNumber)]{2})" +
+                "|([1\(unknownNumber)][0\(unknownNumber)]{2})" +
+                "|([2\(unknownNumber)][0\(unknownNumber)][6\(unknownNumber)]))" +
             "([\\d\(unknownNumber)]{3})$"
     }
 
@@ -219,7 +252,9 @@ class PlateUAAutoDiplomatic13_CDP : PlateUAAutoDiplomatic13_DP
         
         return
             "(^[C\(unknownLetter)][D\(unknownLetter)][P\(unknownLetter)])" +
-            "([\\d\(unknownNumber)]{3})$"
+                "(([0\(unknownNumber)][0123456789\(unknownNumber)]{2}$)" +
+                "|([1\(unknownNumber)][0\(unknownNumber)]{2}$)" +
+                "|([2\(unknownNumber)][0\(unknownNumber)][6\(unknownNumber)]$))"
     }
     
     override var body : String?
@@ -272,6 +307,21 @@ class PlateUAAutoDiplomatic13_CDP : PlateUAAutoDiplomatic13_DP
             result = PlateTemplatableCharType.Num
         default:
             result = nil
+        }
+        
+        return result
+    }
+    
+    override func country() -> PlateUAConstants.PlateDiplomaticArea?
+    {
+        var result : PlateUAConstants.PlateDiplomaticArea? = nil;
+        
+        if let countryStr = self.suffix
+        {
+            if let coutryNum = countryStr.toInt()
+            {
+                result = PlateUAConstants.PlateDiplomaticArea(rawValue: coutryNum)
+            }
         }
         
         return result

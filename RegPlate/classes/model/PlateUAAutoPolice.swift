@@ -25,7 +25,9 @@ class PlateUAAutoPolice04 : PlateUAAuto04
         let unknownNumber = "\\" + self.unknownNumChar()
         
         return
-            "(^[\\d\(unknownNumber)]{2})" +
+            "((^[0\(unknownNumber)][123456789\(unknownNumber)])" +
+                "|(^[1\(unknownNumber)][0123456789\(unknownNumber)])" +
+                "|(^[2\(unknownNumber)][012345678\(unknownNumber)]))" +
             "([\\d\(unknownNumber)]{4})$"
     }
     
@@ -75,6 +77,18 @@ class PlateUAAutoPolice04 : PlateUAAuto04
     override var ownType : PlateUAConstants.PlateOwnType
     {
         return PlateUAConstants.PlateOwnType.Milicia
+    }
+    
+    override var area  : String?
+    {
+        var result : String?
+        
+        if let region = region04()
+        {
+            result = "\(region.region!)"
+        }
+        
+        return result
     }
 }
 

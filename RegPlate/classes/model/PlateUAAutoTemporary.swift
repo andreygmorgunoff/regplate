@@ -23,7 +23,9 @@ class PlateUAAutoTemporary04 : PlateUAAuto04
         let unknownNumber = "\\" + self.unknownNumChar()
         
         return
-            "(^[\\d\(unknownNumber)]{2})" +
+            "((^[0\(unknownNumber)][123456789\(unknownNumber)])" +
+                "|(^[1\(unknownNumber)][0123456789\(unknownNumber)])" +
+                "|(^[2\(unknownNumber)][012345678\(unknownNumber)]))" +
             "(\(PlateUA.tails)" +
             "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
             "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
@@ -71,6 +73,18 @@ class PlateUAAutoTemporary04 : PlateUAAuto04
             result = PlateTemplatableCharType.Letter
         default:
             result = nil
+        }
+        
+        return result
+    }
+    
+    override var area  : String?
+    {
+        var result : String?
+        
+        if let region = region04()
+        {
+            result = "\(region.region!)"
         }
         
         return result

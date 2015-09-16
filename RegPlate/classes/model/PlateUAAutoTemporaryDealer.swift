@@ -56,6 +56,11 @@ class PlateUAAutoTemporaryDealer04 : PlateUAAutoTemporary04
     {
         return PlateUAConstants.PlateOwnType.TradeDialer
     }
+    
+    override var area  : String?
+    {
+        return ""
+    }
 }
 
 class PlateUAAutoTemporaryDealer15 : PlateUAAutoTemporaryDealer04

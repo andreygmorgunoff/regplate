@@ -475,7 +475,7 @@ class PlateUAConstants
         Indonesia,
         Morocco,
         Jordan,
-        BackupCode
+        BackupCode,
         Luxembourg,
         OSCE,
         Uruguay,
@@ -494,11 +494,11 @@ class PlateUAConstants
         EU,
         EBRD,
         GDIPServiceSet,
-        OSCE
+        OldOSCE
         
         var description: String
         {
-            return self.rawValue
+            return String(format: "%03d", self.rawValue)
         }
         
         var region: String?
@@ -507,62 +507,208 @@ class PlateUAConstants
                 
                 switch (self)
                 {
-                case .o1 :
-                    result = NSLocalizedString("Krym", comment: "Krym")
-                case .o2 :
-                    result = NSLocalizedString("Vinnitska", comment: "Vinnitska")
-                case .o3 :
-                    result = NSLocalizedString("Volynska", comment: "Volynska")
-                case .o4 :
-                    result = NSLocalizedString("Dniprovska", comment: "Dniprovska")
-                case .o5 :
-                    result = NSLocalizedString("Donetska", comment: "Donetska")
-                case .o6 :
-                    result = NSLocalizedString("Zhitomirska", comment: "Zhitomirska")
-                case .o7 :
-                    result = NSLocalizedString("Zakarpatska", comment: "Zakarpatska")
-                case .o8 :
-                    result = NSLocalizedString("Zaporizhska", comment: "Zaporizhska")
-                case .o9 :
-                    result = NSLocalizedString("IvanoFrankivska", comment: "IvanoFrankivska")
-                case .o10 :
-                    result = NSLocalizedString("Kyivska", comment: "Kyivska")
-                case .o11 :
-                    result = NSLocalizedString("Kyiv", comment: "Kyiv")
-                case .o12 :
-                    result = NSLocalizedString("Kirovogradska", comment: "Kirovogradska")
-                case .o13 :
-                    result = NSLocalizedString("Luganska", comment: "Luganska")
-                case .o14 :
-                    result = NSLocalizedString("Lvivska", comment: "Lvivska")
-                case .o15 :
-                    result = NSLocalizedString("Mykolaivska", comment: "Mykolaivska")
-                case .o16 :
-                    result = NSLocalizedString("Odeska", comment: "Odeska")
-                case .o17 :
-                    result = NSLocalizedString("Poltavska", comment: "Poltavska")
-                case .o18 :
-                    result = NSLocalizedString("Rivnenska", comment: "Rivnenska")
-                case .o19 :
-                    result = NSLocalizedString("Sumska", comment: "Sumska")
-                case .o20 :
-                    result = NSLocalizedString("Ternopilska", comment: "Ternopilska")
-                case .o21 :
-                    result = NSLocalizedString("Kharkivska", comment: "Kharkivska")
-                case .o22 :
-                    result = NSLocalizedString("Khersonska", comment: "Khersonska")
-                case .o23 :
-                    result = NSLocalizedString("Khmelnitska", comment: "Khmelnitska")
-                case .o24 :
-                    result = NSLocalizedString("Cherkaska", comment: "Cherkaska")
-                case .o25 :
-                    result = NSLocalizedString("Chernigivska", comment: "Chernigivska")
-                case .o26 :
-                    result = NSLocalizedString("Charnivetska", comment: "Charnivetska")
-                case .o27 :
-                    result = NSLocalizedString("Sevastopol", comment: "Sevastopol")
-                case .o28 :
-                    result = NSLocalizedString("General", comment: "General")
+                case Russia :
+                    result = NSLocalizedString("Russia", comment: "Russia")
+                case USA :
+                    result = NSLocalizedString("USA", comment: "USA")
+                case China :
+                    result = NSLocalizedString("China", comment: "China")
+                case UnitedKingdom:
+                    result = NSLocalizedString("UnitedKingdom", comment: "UnitedKingdom")
+                case France:
+                    result = NSLocalizedString("France", comment: "France")
+                case Germany:
+                    result = NSLocalizedString("Germany", comment: "Germany")
+                case Hungary:
+                    result = NSLocalizedString("Hungary", comment: "Hungary")
+                case Lithuania:
+                    result = NSLocalizedString("Lithuania", comment: "Lithuania")
+                case Bulgaria:
+                    result = NSLocalizedString("Bulgaria", comment: "Bulgaria")
+                case Armenia:
+                    result = NSLocalizedString("Armenia", comment: "Armenia")
+                case Australia:
+                    result = NSLocalizedString("Australia", comment: "Australia")
+                case Israel:
+                    result = NSLocalizedString("Israel", comment: "Israel")
+                case Belarus:
+                    result = NSLocalizedString("Belarus", comment: "Belarus")
+                case Poland:
+                    result = NSLocalizedString("Poland", comment: "Poland")
+                case Estonia:
+                    result = NSLocalizedString("Estonia", comment: "Estonia")
+                case Reserve:
+                    result = NSLocalizedString("Reserve", comment: "Reserve")
+                case Sweden:
+                    result = NSLocalizedString("Sweden", comment: "Sweden")
+                case Mexico:
+                    result = NSLocalizedString("Mexico", comment: "Mexico")
+                case Greece:
+                    result = NSLocalizedString("Greece", comment: "Greece")
+                case India:
+                    result = NSLocalizedString("India", comment: "India")
+                case Iran:
+                    result = NSLocalizedString("Iran", comment: "Iran")
+                case Mongolia:
+                    result = NSLocalizedString("Mongolia", comment: "Mongolia")
+                case Vietnam:
+                    result = NSLocalizedString("Vietnam", comment: "Vietnam")
+                case Austria:
+                    result = NSLocalizedString("Austria", comment: "Austria")
+                case Egypt:
+                    result = NSLocalizedString("Egypt", comment: "Egypt")
+                case Argentina:
+                    result = NSLocalizedString("Argentina", comment: "Argentina")
+                case Japan:
+                    result = NSLocalizedString("Japan", comment: "Japan")
+                case Canada:
+                    result = NSLocalizedString("Canada", comment: "Canada")
+                case Portugal:
+                    result = NSLocalizedString("Portugal", comment: "Portugal")
+                case Chile:
+                    result = NSLocalizedString("Chile", comment: "Chile")
+                case Italy:
+                    result = NSLocalizedString("Italy", comment: "Italy")
+                case Spain:
+                    result = NSLocalizedString("Spain", comment: "Spain")
+                case Slovakia:
+                    result = NSLocalizedString("Slovakia", comment: "Slovakia")
+                case Romania:
+                    result = NSLocalizedString("Romania", comment: "Romania")
+                case Turkey:
+                    result = NSLocalizedString("Turkey", comment: "Turkey")
+                case Norway:
+                    result = NSLocalizedString("Norway", comment: "Norway")
+                case Algeria:
+                    result = NSLocalizedString("Algeria", comment: "Algeria")
+                case Switzerland:
+                    result = NSLocalizedString("Switzerland", comment: "Switzerland")
+                case Niger:
+                    result = NSLocalizedString("Niger", comment: "Niger")
+                case Vatican:
+                    result = NSLocalizedString("Vatican", comment: "Vatican")
+                case Azerbaijan:
+                    result = NSLocalizedString("Azerbaijan", comment: "Azerbaijan")
+                case RepublicOfKorea:
+                    result = NSLocalizedString("RepublicOfKorea", comment: "RepublicOfKorea")
+                case Brazil:
+                    result = NSLocalizedString("Brazil", comment: "Brazil")
+                case Denmark:
+                    result = NSLocalizedString("Denmark", comment: "Denmark")
+                case Latvia:
+                    result = NSLocalizedString("Latvia", comment: "Latvia")
+                case Croatia:
+                    result = NSLocalizedString("Croatia", comment: "Croatia")
+                case Cyprus:
+                    result = NSLocalizedString("Cyprus", comment: "Cyprus")
+                case CzechRepublic:
+                    result = NSLocalizedString("CzechRepublic", comment: "CzechRepublic")
+                case Finland:
+                    result = NSLocalizedString("Finland", comment: "Finland")
+                case Seychelles:
+                    result = NSLocalizedString("Seychelles", comment: "Seychelles")
+                case UN:
+                    result = NSLocalizedString("UN", comment: "UN")
+                case CAR:
+                    result = NSLocalizedString("CAR", comment: "CAR")
+                case Slovenia:
+                    result = NSLocalizedString("Slovenia", comment: "Slovenia")
+                case Belgium:
+                    result = NSLocalizedString("Belgium", comment: "Belgium")
+                case Moldova:
+                    result = NSLocalizedString("Moldova", comment: "Moldova")
+                case Cuba:
+                    result = NSLocalizedString("Cuba", comment: "Cuba")
+                case Philippines:
+                    result = NSLocalizedString("Philippines", comment: "Philippines")
+                case SouthAfrica:
+                    result = NSLocalizedString("SouthAfrica", comment: "SouthAfrica")
+                case Pakistan:
+                    result = NSLocalizedString("Pakistan", comment: "Pakistan")
+                case Libya:
+                    result = NSLocalizedString("Libya", comment: "Libya")
+                case IBRD:
+                    result = NSLocalizedString("IBRD", comment: "IBRD")
+                case IFC:
+                    result = NSLocalizedString("IFC", comment: "IFC")
+                case Syria:
+                    result = NSLocalizedString("Syria", comment: "Syria")
+                case Singapore:
+                    result = NSLocalizedString("Singapore", comment: "Singapore")
+                case Ireland:
+                    result = NSLocalizedString("Ireland", comment: "Ireland")
+                case Netherlands:
+                    result = NSLocalizedString("Netherlands", comment: "Netherlands")
+                case Kazakhstan:
+                    result = NSLocalizedString("Kazakhstan", comment: "Kazakhstan")
+                case Georgia:
+                    result = NSLocalizedString("Georgia", comment: "Georgia")
+                case Iraq:
+                    result = NSLocalizedString("Iraq", comment: "Iraq")
+                case Kyrgyzstan:
+                    result = NSLocalizedString("Kyrgyzstan", comment: "Kyrgyzstan")
+                case Tajikistan:
+                    result = NSLocalizedString("Tajikistan", comment: "Tajikistan")
+                case Uzbekistan:
+                    result = NSLocalizedString("Uzbekistan", comment: "Uzbekistan")
+                case Turkmenistan:
+                    result = NSLocalizedString("Turkmenistan", comment: "Turkmenistan")
+                case Thailand:
+                    result = NSLocalizedString("Thailand", comment: "Thailand")
+                case Tunisia:
+                    result = NSLocalizedString("Tunisia", comment: "Tunisia")
+                case Ghana:
+                    result = NSLocalizedString("Ghana", comment: "Ghana")
+                case Serbia:
+                    result = NSLocalizedString("Serbia", comment: "Serbia")
+                case Liechtenstein:
+                    result = NSLocalizedString("Liechtenstein", comment: "Liechtenstein")
+                case Indonesia:
+                    result = NSLocalizedString("Indonesia", comment: "Indonesia")
+                case Morocco:
+                    result = NSLocalizedString("Morocco", comment: "Morocco")
+                case Jordan:
+                    result = NSLocalizedString("Jordan", comment: "Jordan")
+                case BackupCode:
+                    result = NSLocalizedString("BackupCode", comment: "BackupCode")
+                case Luxembourg:
+                    result = NSLocalizedString("Luxembourg", comment: "Luxembourg")
+                case OSCE:
+                    result = NSLocalizedString("OSCE", comment: "OSCE")
+                case Uruguay:
+                    result = NSLocalizedString("Uruguay", comment: "Uruguay")
+                case Peru:
+                    result = NSLocalizedString("Peru", comment: "Peru")
+                case RedCross:
+                    result = NSLocalizedString("RedCross", comment: "RedCross")
+                case Afghanistan:
+                    result = NSLocalizedString("Afghanistan", comment: "Afghanistan")
+                case STCU:
+                    result = NSLocalizedString("STCU", comment: "STCU")
+                case Yugoslavia:
+                    result = NSLocalizedString("Yugoslavia", comment: "Yugoslavia")
+                case Albania:
+                    result = NSLocalizedString("Albania", comment: "Albania")
+                case Macedonia:
+                    result = NSLocalizedString("Macedonia", comment: "Macedonia")
+                case NATO:
+                    result = NSLocalizedString("NATO", comment: "NATO")
+                case NATOInformationCenter:
+                    result = NSLocalizedString("NATOInformationCenter", comment: "NATOInformationCenter")
+                case IMF:
+                    result = NSLocalizedString("IMF", comment: "IMF")
+                case NewZealand:
+                    result = NSLocalizedString("NewZealand", comment: "NewZealand")
+                case Bangladesh:
+                    result = NSLocalizedString("Bangladesh", comment: "Bangladesh")
+                case EU:
+                    result = NSLocalizedString("EU", comment: "EU")
+                case EBRD:
+                    result = NSLocalizedString("EBRD", comment: "EBRD")
+                case GDIPServiceSet:
+                    result = NSLocalizedString("GDIPServiceSet", comment: "GDIPServiceSet")
+                case OldOSCE:
+                    result = NSLocalizedString("OBCE", comment: "OBCE")
                 default :
                     result = nil
                 }
