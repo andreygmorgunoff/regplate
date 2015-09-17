@@ -113,3 +113,94 @@ class PlateUAAutoArmyMoto95 : PlateUAAutoArmy95
     }
 }
 
+class PlateUAAutoArmyHead07 : PlateUAAutoArmy95
+{
+    required init(input: String)
+    {
+        super.init(input: input)
+        
+        type = PlateUAConstants.PlateTypes.Army_Head_07
+    }
+}
+
+class PlateUAAutoArmyVolonter14 : PlateUAAutoArmy95
+{
+    required init(input: String)
+    {
+        super.init(input: input)
+        
+        type = PlateUAConstants.PlateTypes.Army_Volonter_14
+    }
+    
+    override class func regexp() -> String?
+    {
+        let unknownLetter = "\\" + self.unknownLetterChar()
+        let unknownNumber = "\\" + self.unknownNumChar()
+        
+        return
+            "^(KB|BI)[\\d\(unknownNumber)]{4}$"
+    }
+    
+    override var body : String?
+    {
+        return ""
+    }
+    
+    override var prefix : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.startIndex, 2)
+            
+            result = full.substringToIndex(index)
+        }
+        
+        return result
+    }
+    
+    override var suffix : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.endIndex, -4)
+            
+            result = full.substringFromIndex(index)
+        }
+        
+        return result
+    }
+    
+    override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    {
+        var result : PlateTemplatableCharType?
+        
+        switch (index)
+        {
+        case 0, 1:
+            result = PlateTemplatableCharType.Letter
+        case 2...5:
+            result = PlateTemplatableCharType.Num
+        default:
+            result = nil
+        }
+        
+        return result
+    }
+    
+    /**
+    * Plate own type
+    */
+    override var ownType : PlateUAConstants.PlateOwnType
+    {
+        return PlateUAConstants.PlateOwnType.ArmyVolontier
+    }
+    
+    override var area  : String?
+    {
+        return ""
+    }
+}

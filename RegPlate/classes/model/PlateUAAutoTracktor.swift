@@ -26,15 +26,13 @@ class PlateUAAutoTracktor95 : PlateUAAuto04
         
         return
             "(^[\\d\(unknownNumber)]{5})" +
-            "(\(PlateUA.tails)$)"
+            "(\(PlateUA.tails)" +
+            "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
+            "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
+            "|\(unknownLetter)\(unknownLetter))$"
     }
     
     override var body : String?
-    {
-        return ""
-    }
-    
-    override var prefix : String?
     {
         var result : String? = super.value
         
@@ -46,6 +44,11 @@ class PlateUAAutoTracktor95 : PlateUAAuto04
         }
         
         return result
+    }
+    
+    override var prefix : String?
+    {
+        return ""
     }
     
     override var suffix : String?
@@ -76,7 +79,7 @@ class PlateUAAutoTracktor95 : PlateUAAuto04
         {
         case 0...4:
             result = PlateTemplatableCharType.Num
-        case 4...5:
+        case 5...6:
             result = PlateTemplatableCharType.Letter
         default:
             result = nil

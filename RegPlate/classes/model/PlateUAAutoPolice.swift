@@ -101,3 +101,75 @@ class PlateUAAutoPolice15 : PlateUAAutoPolice04
         type = PlateUAConstants.PlateTypes.Police_15
     }
 }
+
+class PlateUAAutoPoliceHead15 : PlateUAAutoPolice04
+{
+    static let kPoliceHeadMaxLength = 4
+    
+    required init(input: String)
+    {
+        super.init(input: input)
+        
+        type = PlateUAConstants.PlateTypes.Police_Head_15
+    }
+    
+    override class func regexp() -> String?
+    {
+        let unknownLetter = "\\" + self.unknownLetterChar()
+        let unknownNumber = "\\" + self.unknownNumChar()
+        
+        return "(^[\\d\(unknownNumber)]{4})$"
+    }
+    
+    override var body : String?
+    {
+        return ""
+    }
+    
+    override var prefix : String?
+    {
+        return ""
+    }
+    
+    override var suffix : String?
+    {
+        var result : String? = super.value
+        
+        if let full = result
+        {
+            let index : String.Index = advance(full.endIndex, -4)
+            
+            result = full.substringFromIndex(index)
+        }
+        
+        return result
+    }
+    
+    override class func maxLength() -> Int
+    {
+        return kPoliceHeadMaxLength
+    }
+    
+    
+    override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    {
+        var result : PlateTemplatableCharType?
+        
+        switch (index)
+        {
+        case 0...4:
+            result = PlateTemplatableCharType.Num
+        default:
+            result = nil
+        }
+        
+        return result
+    }
+    
+    
+    override var area  : String?
+    {
+        return ""
+    }
+    
+}

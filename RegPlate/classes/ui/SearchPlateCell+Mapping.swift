@@ -95,8 +95,10 @@ extension SearchPlateCell
             || plate is PlateUAMotorcycleTemporaryDealer04
             || plate is PlateUAAutoPolice04
             || plate is PlateUAAutoPolice15
+            || plate is PlateUAAutoPoliceHead15
             || plate is PlateUAAutoArmy95
             || plate is PlateUAAutoArmyMoto95
+            || plate is PlateUAAutoArmyVolonter14
             || plate is PlateUAAutoTracktorTemporary13
             )
         {

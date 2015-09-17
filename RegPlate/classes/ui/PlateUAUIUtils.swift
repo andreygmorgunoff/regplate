@@ -13,8 +13,24 @@ struct PlateUAUIUtils
     static func cellIdentifierWithPlate(plate : PlateProtocol) -> String
     {
         var cellIdentifier = "searchPlateCellIdentifier"
-        
-        if (plate is PlateUAAutoTracktor95)
+
+        if (plate is PlateUAAutoArmyVolonter14)
+        {
+            cellIdentifier = "searchPlateCellIdentifier15"
+        }
+        else if (plate is PlateUAAutoTracktorTemporary13)
+        {
+            cellIdentifier = "searchPlateCellIdentifier14"
+        }
+        else if (plate is PlateUAAutoPoliceHead15)
+        {
+            cellIdentifier = "searchPlateCellIdentifier13"
+        }
+        else if (plate is PlateUAAutoArmyHead07)
+        {
+            cellIdentifier = "searchPlateCellIdentifier12"
+        }
+        else if (plate is PlateUAAutoTracktor95)
         {
             cellIdentifier = "searchPlateCellIdentifier11"
         }

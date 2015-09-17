@@ -103,6 +103,7 @@ class PlateUAConstants
         
         // 9
         case Army_95 = "9..95"
+        case Army_Head_07 = "9..07"
         
         // 9.1
         case Army_Volonter_14 = "9.1.14"
@@ -113,6 +114,7 @@ class PlateUAConstants
         // 11
         case Police_04 = "11..04"
         case Police_15 = "11..15"
+        case Police_Head_15 = "11.."
         
         // 12.1
         case Specific_10 = "12.1.10"
