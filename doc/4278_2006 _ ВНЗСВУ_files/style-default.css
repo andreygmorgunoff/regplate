@@ -1,0 +1,275 @@
+/* Base theme design */
+
+body {
+	background: #000 url('images/background-wolfbw.jpg') top center no-repeat;
+}
+
+blockquote {
+	color: #005;
+}
+
+h2, blockquote p:first-letter, .comment-author {
+	text-shadow: 0;
+	-moz-text-shadow: 0;
+	-khtml-text-shadow: 0;
+	-webkit-text-shadow: 0;
+}
+
+h1 {
+	text-shadow: 2px 2px 2px #111;
+	-moz-text-shadow: 2px 2px 2px #111;
+	-khtml-text-shadow: 2px 2px 2px #111;
+	-webkit-text-shadow: 2px 2px 2px #111;
+}
+
+#header h1 a:link, #header h1 a:visited {
+	color: #d00;
+}
+
+#header h1 a:hover {
+	color: #f00;
+}
+
+#menubar-wrapper {
+	clear: both;
+	margin-bottom: 10px;
+}
+
+	.menu { 
+		padding-left: 3px; 
+	}
+
+	.menunav {
+		padding-right: 5px;
+	}
+
+
+/* curved corners 6px */
+#menubar-wrapper, #content-wrapper, .comment .comment-content, .sidebar .widget, .casts-nav, #wp-paginav {
+	-moz-border-radius: 0px;
+	-khtml-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+/* curved corners 10px */
+#comment-wrapper, .type-post, .type-page, .type-music, .type-comic, .type-showcase, .type-casts, .wp-caption,
+blockquote, .type-attachment  {
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* border radius none */
+.menu ul li ul li a:hover, .menu ul li ul li a.selected {
+	-moz-border-radius: 0;
+	-khtml-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	background: #111;
+}
+
+/* box shadow min */
+.box-shadow-min {
+	-moz-box-shadow: 2px 2px 2px #555;
+	-webkit-box-shadow: 2px 2px 2px #555;
+	-khtml-box-shadow: 2px 2px 2px #555;
+	box-shadow: 2px 2px 2px #555;
+}
+
+/* box shadow thick */
+#menubar-wrapper, {
+
+}
+
+#content-wrapper {
+
+}
+
+.no-box-shadow {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-khtml-box-shadow: none;
+	box-shadow: none;
+}
+
+/* text shadow min */
+#menubar-wrapper {
+	text-shadow: 1px 1px 1px #000;
+	-moz-text-shadow: 1px 1px 1px #000;
+	-khtml-text-shadow: 1px 1px 1px #000;
+	-webkit-text-shadow: 1px 1px 1px #000;
+}
+
+#content-wrapper, .wp-caption, #wp-paginav {
+	background: background:url(images/bk_box_mid_right.png) 0 0 repeat-y;
+	border: 0;
+}
+
+.type-comic, .type-music, .type-showcase, .type-casts, .sidebar .widget, .type-attachment {
+	background: url(images/bk_box_mid_right.png) 0 0 repeat-y;
+	border: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.type-post, .type-page {
+    background: url("images/bk_box_mid_inner.jpg") no-repeat scroll 0 0 transparent;
+	box-shadow: 1px 2px 5px #000000;
+	background-color: #fff; 
+	}
+
+.comment .comment-content, blockquote {
+	background: url('images/whitetranslow.png') repeat;
+}
+
+#comment-wrapper, .type-post, .type-page, .type-music, .type-showcase, .type-comic, .type-casts, .wp-caption {
+	padding: 10px;
+}
+
+.sidebar .widget {
+	padding: 0px 5px 2px;
+}
+
+.post-text {
+	border-bottom: dotted 1px #ddd;
+}
+
+.comment-author {
+	text-transform: capitalize;
+}
+
+#comic-wrap {
+	background: #fff;
+	margin: 5px auto;
+	padding: 5px;
+	-moz-box-shadow: 2px 2px 2px #555;
+	-webkit-box-shadow: 2px 2px 2px #555;
+	-khtml-box-shadow: 2px 2px 2px #555;
+	box-shadow: 2px 2px 2px #555;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#comic {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#blogheader {
+	width: 80%;
+	border-top: solid 1px #333;
+	margin: 15px auto;
+	-moz-box-shadow: 2px 2px 2px #999;
+	-webkit-box-shadow: 2px 2px 2px #999;
+	-khtml-box-shadow: 2px 2px 2px #999;
+	box-shadow: 2px 2px 2px #999;
+}
+
+.sidebar .widget_search {
+	padding: 3px 0;
+}
+
+.members-post, .non-members-post {
+	background: #d1ddd1;
+	padding: 5px;
+}
+
+#menubar-wrapper {
+	padding: 10px 0;
+}
+
+.chrome .menu, .safari .menu {
+	margin-top: 2px;
+}
+
+.chrome .menunav, .safari .menunav {
+	margin-top: 4px;
+}
+
+.chrome .searchform button, .safari .searchform button {
+	margin-top: 0px;
+}
+
+.ie button {
+	color: #000;
+}
+
+.menunav-prev a, .menunav-next a {
+	margin: 0 3px;
+}
+
+.menunav-prev a:hover, .menunav-next a:hover, .menunav-rss:hover, .menu ul li a:hover, .menu ul li a.selected{
+	color: #fcff00;
+	background:url(images/bk_top_hover.png) 50% 0 no-repeat;
+
+}
+
+.menu ul li ul li a:hover {
+	background: #888;
+	-moz-border-radius: 0;
+	-khtml-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+
+
+#wp-paginav {
+	padding: 0 5px;
+}
+
+#footer {
+	color: #272727;
+}
+
+	#footer a {
+		color: #272727;
+	}
+	
+	#footer a:hover {
+		color: ##272727;
+	}
+	
+.blognav {
+	margin: 2px auto;
+}
+
+
+/* casts / commpress design */
+
+.casts-show {
+	font-size: 16px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+
+/* nav wrappers  */
+#default-nav-wrapper {
+	margin: 2px auto;
+}
+
+.default-nav, .casts-nav {
+	border: solid 1px #aaa;
+	background: #ddd;
+	width: 240px;
+	padding: 4px 2px;
+}
+
+
+/* fix for opera */
+.opera #submit, .opera #searchform button, .opera .type-post, .opera .type-page, .opera .wpsb_opt_in button,
+.opera .type-comic, .opera .type-showcase, .opera .type-music, .opera #wp-paginav, .opera .sidebar h2, 
+.opera #comment-wrapper, .opera .blognav, .opera .default-nav, .opera .submit, .opera .type-attachment, .opera .sidebar .widget {
+	background: #ccc;
+}
+
+.sidebar .widget_easel_classic_bookmark {
+	background: none;
+	border: none;
+	padding: 2px 0;
+}

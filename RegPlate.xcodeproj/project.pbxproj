@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F03B0F51B99A395002FE30D /* PlateUAMoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B0F41B99A395002FE30D /* PlateUAMoto.swift */; };
+		5F03B0F61B99A457002FE30D /* PlateUAMoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B0F41B99A395002FE30D /* PlateUAMoto.swift */; };
+		5F03B0F91B99AEBB002FE30D /* PlateUAMotoTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B0F71B99AEBB002FE30D /* PlateUAMotoTemporary.swift */; };
+		5F03B0FA1B99AEBB002FE30D /* PlateUAMotoTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B0F71B99AEBB002FE30D /* PlateUAMotoTemporary.swift */; };
+		5F03B0FB1B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B0F81B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift */; };
+		5F03B0FC1B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B0F81B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift */; };
+		5F23F9521B834EE600E221D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23F9511B834EE600E221D1 /* AppDelegate.swift */; };
+		5F23F9551B834EE600E221D1 /* RegPlate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F23F9531B834EE600E221D1 /* RegPlate.xcdatamodeld */; };
+		5F23F9571B834EE600E221D1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23F9561B834EE600E221D1 /* SearchViewController.swift */; };
+		5F23F95A1B834EE600E221D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F23F9581B834EE600E221D1 /* Main.storyboard */; };
+		5F23F95C1B834EE600E221D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F23F95B1B834EE600E221D1 /* Images.xcassets */; };
+		5F23F95F1B834EE600E221D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F23F95D1B834EE600E221D1 /* LaunchScreen.xib */; };
+		5F23F9751B83871900E221D1 /* SearchPlateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23F9741B83871900E221D1 /* SearchPlateCell.swift */; };
+		5F3209AC1B90A86B0058C193 /* PlateUAConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209AB1B90A86B0058C193 /* PlateUAConstantsTests.swift */; };
+		5F3209AE1B90AD320058C193 /* PlateUAUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209AD1B90AD320058C193 /* PlateUAUtilsTests.swift */; };
+		5F3209B01B946D620058C193 /* PlateUAAutoTaxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209AF1B946D620058C193 /* PlateUAAutoTaxi.swift */; };
+		5F3209B11B946E1B0058C193 /* PlateUAAutoTaxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209AF1B946D620058C193 /* PlateUAAutoTaxi.swift */; };
+		5F3209B31B96FB680058C193 /* PlateUAAutoTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209B21B96FB680058C193 /* PlateUAAutoTemporary.swift */; };
+		5F3209B41B97527D0058C193 /* PlateUAAutoTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209B21B96FB680058C193 /* PlateUAAutoTemporary.swift */; };
+		5F3209B61B981C940058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */; };
+		5F3209B71B982D990058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */; };
+		5F4480081BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */; };
+		5F4480091BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */; };
+		5F68BDFE1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */; };
+		5F8DDC3C1B9EF33B00294323 /* PlateUATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC3B1B9EF33B00294323 /* PlateUATests.swift */; };
+		5F8DDC3E1B9EF36D00294323 /* PlateUAAutoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC3D1B9EF36D00294323 /* PlateUAAutoTests.swift */; };
+		5F8DDC421BA0663400294323 /* PlateUAMotorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC3F1BA0663400294323 /* PlateUAMotorcycle.swift */; };
+		5F8DDC431BA0663400294323 /* PlateUAMotorcycleTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC401BA0663400294323 /* PlateUAMotorcycleTemporary.swift */; };
+		5F8DDC441BA0663400294323 /* PlateUAMotorcycleTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC411BA0663400294323 /* PlateUAMotorcycleTemporaryDealer.swift */; };
+		5F8DDC451BA067BB00294323 /* PlateUAMotorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC3F1BA0663400294323 /* PlateUAMotorcycle.swift */; };
+		5F8DDC461BA067BD00294323 /* PlateUAMotorcycleTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC401BA0663400294323 /* PlateUAMotorcycleTemporary.swift */; };
+		5F8DDC471BA067C100294323 /* PlateUAMotorcycleTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC411BA0663400294323 /* PlateUAMotorcycleTemporaryDealer.swift */; };
+		5FA1C94E1BA1625100E8E8EB /* PlateUAUIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C94D1BA1625100E8E8EB /* PlateUAUIUtils.swift */; };
+		5FA1C94F1BA1625100E8E8EB /* PlateUAUIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C94D1BA1625100E8E8EB /* PlateUAUIUtils.swift */; };
+		5FA1C9511BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C9501BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift */; };
+		5FA1C9521BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C9501BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift */; };
+		5FA1C9531BA164BB00E8E8EB /* SearchPlateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23F9741B83871900E221D1 /* SearchPlateCell.swift */; };
+		5FA1C9541BA164BF00E8E8EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23F9561B834EE600E221D1 /* SearchViewController.swift */; };
+		5FA1C9561BA1B7E800E8E8EB /* PlateUAAutoPolice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */; };
+		5FA1C9571BA1B7E800E8E8EB /* PlateUAAutoPolice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */; };
+		5FAF37681B8CC260000CABDA /* PlateUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */; };
+		5FC109B11B8F103700FB080B /* PlateUAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC109B01B8F103700FB080B /* PlateUAConstants.swift */; };
+		5FCE8FA61B904207006AD14F /* PlateUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */; };
+		5FCE8FA81B90426E006AD14F /* PlateUAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC109B01B8F103700FB080B /* PlateUAConstants.swift */; };
+		5FE8CB291BA81658005D4866 /* PlateUAAutoDiplomatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */; };
+		5FE8CB2B1BA85F63005D4866 /* PlateUAAutoArmy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */; };
+		5FE8CB2C1BA85F63005D4866 /* PlateUAAutoArmy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */; };
+		5FF77B981B85AF8D00DCA2A4 /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B971B85AF8D00DCA2A4 /* Plate.swift */; };
+		5FF77B9A1B85B03B00DCA2A4 /* PlateUA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B991B85B03B00DCA2A4 /* PlateUA.swift */; };
+		5FF77B9F1B85D0ED00DCA2A4 /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */; };
+		5FF77BA11B85D4A500DCA2A4 /* PlateUAAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77BA01B85D4A500DCA2A4 /* PlateUAAuto.swift */; };
+		5FF77BB41B85FD3C00DCA2A4 /* PlateUAAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77BA01B85D4A500DCA2A4 /* PlateUAAuto.swift */; };
+		5FF77BB51B85FD3F00DCA2A4 /* PlateUA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B991B85B03B00DCA2A4 /* PlateUA.swift */; };
+		5FF77BB61B85FD4D00DCA2A4 /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B971B85AF8D00DCA2A4 /* Plate.swift */; };
+		5FF77BB71B85FD4F00DCA2A4 /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */; };
+		EE49CCF31BA9F80300249D11 /* PlateUAAutoTracktor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */; };
+		EE49CCF41BA9FF1C00249D11 /* PlateUAAutoTracktor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F23F9651B834EE600E221D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F23F9441B834EE600E221D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F23F94B1B834EE600E221D1;
+			remoteInfo = RegPlate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F03B0F41B99A395002FE30D /* PlateUAMoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAMoto.swift; path = classes/model/PlateUAMoto.swift; sourceTree = "<group>"; };
+		5F03B0F71B99AEBB002FE30D /* PlateUAMotoTemporary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAMotoTemporary.swift; path = classes/model/PlateUAMotoTemporary.swift; sourceTree = "<group>"; };
+		5F03B0F81B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAMotoTemporaryDealer.swift; path = classes/model/PlateUAMotoTemporaryDealer.swift; sourceTree = "<group>"; };
+		5F23F94C1B834EE600E221D1 /* RegPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F23F9501B834EE600E221D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F23F9511B834EE600E221D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5F23F9541B834EE600E221D1 /* RegPlate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegPlate.xcdatamodel; sourceTree = "<group>"; };
+		5F23F9561B834EE600E221D1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5F23F9591B834EE600E221D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5F23F95B1B834EE600E221D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5F23F95E1B834EE600E221D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5F23F9641B834EE600E221D1 /* RegPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F23F9691B834EE600E221D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F23F9741B83871900E221D1 /* SearchPlateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlateCell.swift; sourceTree = "<group>"; };
+		5F3209AB1B90A86B0058C193 /* PlateUAConstantsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUAConstantsTests.swift; sourceTree = "<group>"; };
+		5F3209AD1B90AD320058C193 /* PlateUAUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUAUtilsTests.swift; sourceTree = "<group>"; };
+		5F3209AF1B946D620058C193 /* PlateUAAutoTaxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTaxi.swift; path = classes/model/PlateUAAutoTaxi.swift; sourceTree = "<group>"; };
+		5F3209B21B96FB680058C193 /* PlateUAAutoTemporary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTemporary.swift; path = classes/model/PlateUAAutoTemporary.swift; sourceTree = "<group>"; };
+		5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTemporaryDealer.swift; path = classes/model/PlateUAAutoTemporaryDealer.swift; sourceTree = "<group>"; };
+		5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAStaff.swift; path = classes/model/PlateUAStaff.swift; sourceTree = "<group>"; };
+		5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoDiplomatic.swift; path = classes/model/PlateUAAutoDiplomatic.swift; sourceTree = "<group>"; };
+		5F8DDC3B1B9EF33B00294323 /* PlateUATests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUATests.swift; sourceTree = "<group>"; };
+		5F8DDC3D1B9EF36D00294323 /* PlateUAAutoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUAAutoTests.swift; sourceTree = "<group>"; };
+		5F8DDC3F1BA0663400294323 /* PlateUAMotorcycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAMotorcycle.swift; path = classes/model/PlateUAMotorcycle.swift; sourceTree = "<group>"; };
+		5F8DDC401BA0663400294323 /* PlateUAMotorcycleTemporary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAMotorcycleTemporary.swift; path = classes/model/PlateUAMotorcycleTemporary.swift; sourceTree = "<group>"; };
+		5F8DDC411BA0663400294323 /* PlateUAMotorcycleTemporaryDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAMotorcycleTemporaryDealer.swift; path = classes/model/PlateUAMotorcycleTemporaryDealer.swift; sourceTree = "<group>"; };
+		5FA1C94D1BA1625100E8E8EB /* PlateUAUIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAUIUtils.swift; path = classes/ui/PlateUAUIUtils.swift; sourceTree = "<group>"; };
+		5FA1C9501BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SearchPlateCell+Mapping.swift"; path = "classes/ui/SearchPlateCell+Mapping.swift"; sourceTree = "<group>"; };
+		5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoPolice.swift; path = classes/model/PlateUAAutoPolice.swift; sourceTree = "<group>"; };
+		5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAUtils.swift; path = classes/utils/PlateUAUtils.swift; sourceTree = "<group>"; };
+		5FC109B01B8F103700FB080B /* PlateUAConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUAConstants.swift; sourceTree = "<group>"; };
+		5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoArmy.swift; path = classes/model/PlateUAAutoArmy.swift; sourceTree = "<group>"; };
+		5FF77B971B85AF8D00DCA2A4 /* Plate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plate.swift; path = classes/model/Plate.swift; sourceTree = "<group>"; };
+		5FF77B991B85B03B00DCA2A4 /* PlateUA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUA.swift; path = classes/model/PlateUA.swift; sourceTree = "<group>"; };
+		5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegExp.swift; path = classes/utils/RegExp.swift; sourceTree = "<group>"; };
+		5FF77BA01B85D4A500DCA2A4 /* PlateUAAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAuto.swift; path = classes/model/PlateUAAuto.swift; sourceTree = "<group>"; };
+		EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTracktor.swift; path = classes/model/PlateUAAutoTracktor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F23F9491B834EE600E221D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F23F9611B834EE600E221D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F23F9431B834EE600E221D1 = {
+			isa = PBXGroup;
+			children = (
+				5F23F94E1B834EE600E221D1 /* RegPlate */,
+				5F23F9671B834EE600E221D1 /* RegPlateTests */,
+				5F23F94D1B834EE600E221D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F23F94D1B834EE600E221D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F23F94C1B834EE600E221D1 /* RegPlate.app */,
+				5F23F9641B834EE600E221D1 /* RegPlateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F23F94E1B834EE600E221D1 /* RegPlate */ = {
+			isa = PBXGroup;
+			children = (
+				5FA1C94C1BA1622900E8E8EB /* UI */,
+				5FF77B9D1B85D0D300DCA2A4 /* Utils */,
+				5FF77B961B85AF6E00DCA2A4 /* Model */,
+				5F23F9511B834EE600E221D1 /* AppDelegate.swift */,
+				5F23F9581B834EE600E221D1 /* Main.storyboard */,
+				5F23F95B1B834EE600E221D1 /* Images.xcassets */,
+				5F23F95D1B834EE600E221D1 /* LaunchScreen.xib */,
+				5F23F9531B834EE600E221D1 /* RegPlate.xcdatamodeld */,
+				5F23F94F1B834EE600E221D1 /* Supporting Files */,
+			);
+			path = RegPlate;
+			sourceTree = "<group>";
+		};
+		5F23F94F1B834EE600E221D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F23F9501B834EE600E221D1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F23F9671B834EE600E221D1 /* RegPlateTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F8DDC3D1B9EF36D00294323 /* PlateUAAutoTests.swift */,
+				5F8DDC3B1B9EF33B00294323 /* PlateUATests.swift */,
+				5F3209AB1B90A86B0058C193 /* PlateUAConstantsTests.swift */,
+				5F3209AD1B90AD320058C193 /* PlateUAUtilsTests.swift */,
+				5F23F9681B834EE600E221D1 /* Supporting Files */,
+			);
+			path = RegPlateTests;
+			sourceTree = "<group>";
+		};
+		5F23F9681B834EE600E221D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F23F9691B834EE600E221D1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FA1C94C1BA1622900E8E8EB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5FA1C94D1BA1625100E8E8EB /* PlateUAUIUtils.swift */,
+				5F23F9561B834EE600E221D1 /* SearchViewController.swift */,
+				5F23F9741B83871900E221D1 /* SearchPlateCell.swift */,
+				5FA1C9501BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		5FF77B961B85AF6E00DCA2A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FF77B971B85AF8D00DCA2A4 /* Plate.swift */,
+				5FF77B991B85B03B00DCA2A4 /* PlateUA.swift */,
+				5FF77BA01B85D4A500DCA2A4 /* PlateUAAuto.swift */,
+				5F3209AF1B946D620058C193 /* PlateUAAutoTaxi.swift */,
+				5F3209B21B96FB680058C193 /* PlateUAAutoTemporary.swift */,
+				5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */,
+				5F03B0F41B99A395002FE30D /* PlateUAMoto.swift */,
+				5F03B0F71B99AEBB002FE30D /* PlateUAMotoTemporary.swift */,
+				5F03B0F81B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift */,
+				5F8DDC3F1BA0663400294323 /* PlateUAMotorcycle.swift */,
+				5F8DDC401BA0663400294323 /* PlateUAMotorcycleTemporary.swift */,
+				5F8DDC411BA0663400294323 /* PlateUAMotorcycleTemporaryDealer.swift */,
+				5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */,
+				5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */,
+				5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */,
+				EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */,
+				5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */,
+				5FC109B01B8F103700FB080B /* PlateUAConstants.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5FF77B9D1B85D0D300DCA2A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */,
+				5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F23F94B1B834EE600E221D1 /* RegPlate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F23F96E1B834EE600E221D1 /* Build configuration list for PBXNativeTarget "RegPlate" */;
+			buildPhases = (
+				5F23F9481B834EE600E221D1 /* Sources */,
+				5F23F9491B834EE600E221D1 /* Frameworks */,
+				5F23F94A1B834EE600E221D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RegPlate;
+			productName = RegPlate;
+			productReference = 5F23F94C1B834EE600E221D1 /* RegPlate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F23F9631B834EE600E221D1 /* RegPlateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F23F9711B834EE600E221D1 /* Build configuration list for PBXNativeTarget "RegPlateTests" */;
+			buildPhases = (
+				5F23F9601B834EE600E221D1 /* Sources */,
+				5F23F9611B834EE600E221D1 /* Frameworks */,
+				5F23F9621B834EE600E221D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F23F9661B834EE600E221D1 /* PBXTargetDependency */,
+			);
+			name = RegPlateTests;
+			productName = RegPlateTests;
+			productReference = 5F23F9641B834EE600E221D1 /* RegPlateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F23F9441B834EE600E221D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Andriy Morgunov";
+				TargetAttributes = {
+					5F23F94B1B834EE600E221D1 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					5F23F9631B834EE600E221D1 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 5F23F94B1B834EE600E221D1;
+					};
+				};
+			};
+			buildConfigurationList = 5F23F9471B834EE600E221D1 /* Build configuration list for PBXProject "RegPlate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F23F9431B834EE600E221D1;
+			productRefGroup = 5F23F94D1B834EE600E221D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F23F94B1B834EE600E221D1 /* RegPlate */,
+				5F23F9631B834EE600E221D1 /* RegPlateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F23F94A1B834EE600E221D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F23F95A1B834EE600E221D1 /* Main.storyboard in Resources */,
+				5F23F95F1B834EE600E221D1 /* LaunchScreen.xib in Resources */,
+				5F23F95C1B834EE600E221D1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F23F9621B834EE600E221D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F23F9481B834EE600E221D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F8DDC431BA0663400294323 /* PlateUAMotorcycleTemporary.swift in Sources */,
+				5F8DDC421BA0663400294323 /* PlateUAMotorcycle.swift in Sources */,
+				5F03B0FB1B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift in Sources */,
+				5F68BDFE1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift in Sources */,
+				5FC109B11B8F103700FB080B /* PlateUAConstants.swift in Sources */,
+				5F23F9751B83871900E221D1 /* SearchPlateCell.swift in Sources */,
+				5F03B0F91B99AEBB002FE30D /* PlateUAMotoTemporary.swift in Sources */,
+				5F3209B61B981C940058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */,
+				5FF77B9F1B85D0ED00DCA2A4 /* RegExp.swift in Sources */,
+				5F03B0F51B99A395002FE30D /* PlateUAMoto.swift in Sources */,
+				5FF77B9A1B85B03B00DCA2A4 /* PlateUA.swift in Sources */,
+				5F8DDC441BA0663400294323 /* PlateUAMotorcycleTemporaryDealer.swift in Sources */,
+				5F23F9571B834EE600E221D1 /* SearchViewController.swift in Sources */,
+				5FF77BA11B85D4A500DCA2A4 /* PlateUAAuto.swift in Sources */,
+				5F3209B01B946D620058C193 /* PlateUAAutoTaxi.swift in Sources */,
+				5FAF37681B8CC260000CABDA /* PlateUAUtils.swift in Sources */,
+				5F23F9521B834EE600E221D1 /* AppDelegate.swift in Sources */,
+				5F3209B31B96FB680058C193 /* PlateUAAutoTemporary.swift in Sources */,
+				5F23F9551B834EE600E221D1 /* RegPlate.xcdatamodeld in Sources */,
+				5F4480081BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */,
+				EE49CCF31BA9F80300249D11 /* PlateUAAutoTracktor.swift in Sources */,
+				5FA1C9511BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */,
+				5FA1C94E1BA1625100E8E8EB /* PlateUAUIUtils.swift in Sources */,
+				5FF77B981B85AF8D00DCA2A4 /* Plate.swift in Sources */,
+				5FE8CB2B1BA85F63005D4866 /* PlateUAAutoArmy.swift in Sources */,
+				5FA1C9561BA1B7E800E8E8EB /* PlateUAAutoPolice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F23F9601B834EE600E221D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FA1C9531BA164BB00E8E8EB /* SearchPlateCell.swift in Sources */,
+				5FF77BB51B85FD3F00DCA2A4 /* PlateUA.swift in Sources */,
+				5F03B0FA1B99AEBB002FE30D /* PlateUAMotoTemporary.swift in Sources */,
+				5F03B0FC1B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift in Sources */,
+				5F3209B71B982D990058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */,
+				5F3209B41B97527D0058C193 /* PlateUAAutoTemporary.swift in Sources */,
+				5FF77BB71B85FD4F00DCA2A4 /* RegExp.swift in Sources */,
+				5F8DDC451BA067BB00294323 /* PlateUAMotorcycle.swift in Sources */,
+				5FCE8FA61B904207006AD14F /* PlateUAUtils.swift in Sources */,
+				5FF77BB61B85FD4D00DCA2A4 /* Plate.swift in Sources */,
+				5F3209B11B946E1B0058C193 /* PlateUAAutoTaxi.swift in Sources */,
+				5FA1C9571BA1B7E800E8E8EB /* PlateUAAutoPolice.swift in Sources */,
+				5FE8CB2C1BA85F63005D4866 /* PlateUAAutoArmy.swift in Sources */,
+				5F8DDC3E1B9EF36D00294323 /* PlateUAAutoTests.swift in Sources */,
+				EE49CCF41BA9FF1C00249D11 /* PlateUAAutoTracktor.swift in Sources */,
+				5F3209AE1B90AD320058C193 /* PlateUAUtilsTests.swift in Sources */,
+				5FA1C9541BA164BF00E8E8EB /* SearchViewController.swift in Sources */,
+				5FF77BB41B85FD3C00DCA2A4 /* PlateUAAuto.swift in Sources */,
+				5F3209AC1B90A86B0058C193 /* PlateUAConstantsTests.swift in Sources */,
+				5FA1C94F1BA1625100E8E8EB /* PlateUAUIUtils.swift in Sources */,
+				5FCE8FA81B90426E006AD14F /* PlateUAConstants.swift in Sources */,
+				5F8DDC3C1B9EF33B00294323 /* PlateUATests.swift in Sources */,
+				5F8DDC461BA067BD00294323 /* PlateUAMotorcycleTemporary.swift in Sources */,
+				5FA1C9521BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */,
+				5F03B0F61B99A457002FE30D /* PlateUAMoto.swift in Sources */,
+				5F4480091BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */,
+				5FE8CB291BA81658005D4866 /* PlateUAAutoDiplomatic.swift in Sources */,
+				5F8DDC471BA067C100294323 /* PlateUAMotorcycleTemporaryDealer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F23F9661B834EE600E221D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F23F94B1B834EE600E221D1 /* RegPlate */;
+			targetProxy = 5F23F9651B834EE600E221D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F23F9581B834EE600E221D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F23F9591B834EE600E221D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5F23F95D1B834EE600E221D1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F23F95E1B834EE600E221D1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F23F96C1B834EE600E221D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F23F96D1B834EE600E221D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F23F96F1B834EE600E221D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RegPlate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F23F9701B834EE600E221D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RegPlate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5F23F9721B834EE600E221D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RegPlateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegPlate.app/RegPlate";
+			};
+			name = Debug;
+		};
+		5F23F9731B834EE600E221D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RegPlateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegPlate.app/RegPlate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F23F9471B834EE600E221D1 /* Build configuration list for PBXProject "RegPlate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F23F96C1B834EE600E221D1 /* Debug */,
+				5F23F96D1B834EE600E221D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F23F96E1B834EE600E221D1 /* Build configuration list for PBXNativeTarget "RegPlate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F23F96F1B834EE600E221D1 /* Debug */,
+				5F23F9701B834EE600E221D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F23F9711B834EE600E221D1 /* Build configuration list for PBXNativeTarget "RegPlateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F23F9721B834EE600E221D1 /* Debug */,
+				5F23F9731B834EE600E221D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5F23F9531B834EE600E221D1 /* RegPlate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5F23F9541B834EE600E221D1 /* RegPlate.xcdatamodel */,
+			);
+			currentVersion = 5F23F9541B834EE600E221D1 /* RegPlate.xcdatamodel */;
+			path = RegPlate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5F23F9441B834EE600E221D1 /* Project object */;
+}
