@@ -28,6 +28,8 @@
 		5F3209B41B97527D0058C193 /* PlateUAAutoTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209B21B96FB680058C193 /* PlateUAAutoTemporary.swift */; };
 		5F3209B61B981C940058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */; };
 		5F3209B71B982D990058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */; };
+		5F4480081BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */; };
+		5F4480091BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */; };
 		5F68BDFE1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */; };
 		5F8DDC3C1B9EF33B00294323 /* PlateUATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC3B1B9EF33B00294323 /* PlateUATests.swift */; };
 		5F8DDC3E1B9EF36D00294323 /* PlateUAAutoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DDC3D1B9EF36D00294323 /* PlateUAAutoTests.swift */; };
@@ -94,6 +96,7 @@
 		5F3209AF1B946D620058C193 /* PlateUAAutoTaxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTaxi.swift; path = classes/model/PlateUAAutoTaxi.swift; sourceTree = "<group>"; };
 		5F3209B21B96FB680058C193 /* PlateUAAutoTemporary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTemporary.swift; path = classes/model/PlateUAAutoTemporary.swift; sourceTree = "<group>"; };
 		5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTemporaryDealer.swift; path = classes/model/PlateUAAutoTemporaryDealer.swift; sourceTree = "<group>"; };
+		5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAStaff.swift; path = classes/model/PlateUAStaff.swift; sourceTree = "<group>"; };
 		5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoDiplomatic.swift; path = classes/model/PlateUAAutoDiplomatic.swift; sourceTree = "<group>"; };
 		5F8DDC3B1B9EF33B00294323 /* PlateUATests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUATests.swift; sourceTree = "<group>"; };
 		5F8DDC3D1B9EF36D00294323 /* PlateUAAutoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUAAutoTests.swift; sourceTree = "<group>"; };
@@ -223,6 +226,7 @@
 				5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */,
 				5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */,
 				EE49CCF21BA9F80300249D11 /* PlateUAAutoTracktor.swift */,
+				5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */,
 				5FC109B01B8F103700FB080B /* PlateUAConstants.swift */,
 			);
 			name = Model;
@@ -356,6 +360,7 @@
 				5F23F9521B834EE600E221D1 /* AppDelegate.swift in Sources */,
 				5F3209B31B96FB680058C193 /* PlateUAAutoTemporary.swift in Sources */,
 				5F23F9551B834EE600E221D1 /* RegPlate.xcdatamodeld in Sources */,
+				5F4480081BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */,
 				EE49CCF31BA9F80300249D11 /* PlateUAAutoTracktor.swift in Sources */,
 				5FA1C9511BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */,
 				5FA1C94E1BA1625100E8E8EB /* PlateUAUIUtils.swift in Sources */,
@@ -394,6 +399,7 @@
 				5F8DDC461BA067BD00294323 /* PlateUAMotorcycleTemporary.swift in Sources */,
 				5FA1C9521BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */,
 				5F03B0F61B99A457002FE30D /* PlateUAMoto.swift in Sources */,
+				5F4480091BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */,
 				5FE8CB291BA81658005D4866 /* PlateUAAutoDiplomatic.swift in Sources */,
 				5F8DDC471BA067C100294323 /* PlateUAMotorcycleTemporaryDealer.swift in Sources */,
 			);

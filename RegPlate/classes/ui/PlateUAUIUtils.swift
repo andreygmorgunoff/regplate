@@ -14,7 +14,11 @@ struct PlateUAUIUtils
     {
         var cellIdentifier = "searchPlateCellIdentifier"
 
-        if (plate is PlateUAAutoArmyVolonter14)
+        if (plate is PlateUAStaff10)
+        {
+            cellIdentifier = "searchPlateCellIdentifier16"
+        }
+        else if (plate is PlateUAAutoArmyVolonter14)
         {
             cellIdentifier = "searchPlateCellIdentifier15"
         }
@@ -69,7 +73,8 @@ struct PlateUAUIUtils
         }
         else if (plate is PlateUAMoto04
             || plate is PlateUAMotoTemporary04
-            || plate is PlateUAMotoTemporaryDealer04)
+            || plate is PlateUAMotoTemporaryDealer04
+            || plate is PlateUAStaffTemporary15)
         {
             cellIdentifier = "searchPlateCellIdentifier3"
         }

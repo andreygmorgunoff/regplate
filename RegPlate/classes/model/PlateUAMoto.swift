@@ -17,6 +17,24 @@ class PlateUAMoto04 : PlateUAAuto04
         type = PlateUAConstants.PlateTypes.Motorbike_04
     }
     
+    override class func regexp() -> String?
+    {
+        let unknownLetter = "\\" + self.unknownLetterChar()
+        let unknownNumber = "\\" + self.unknownNumChar()
+        
+        return "(^\(PlateUA.series)" +
+            "|[\(PlateUA.prefixSeries)]\(unknownLetter)" +
+            "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
+            "|\(unknownLetter)\(unknownLetter))" +
+            
+            "(\(PlateUA.tails)" +
+            "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
+            "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
+            "|\(unknownLetter)\(unknownLetter))" +
+        
+            "([\\d\(unknownNumber)]{4})$";
+    }
+    
     override var body : String?
     {
         var result : String? = super.value

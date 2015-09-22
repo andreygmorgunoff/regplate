@@ -69,6 +69,35 @@ class PlateUAMotorcycle04 : PlateUAMoto04
     {
         return PlateUAConstants.PlateEngineType.MoreThen50
     }
+    
+    override var area  : String?
+    {
+        var result : String?
+        
+        if let region = region()
+        {
+            result = "\(region.region!)"
+        }
+        
+        return result
+    }
+    
+    override class func regexp() -> String?
+    {
+        let unknownLetter = "\\" + self.unknownLetterChar()
+        let unknownNumber = "\\" + self.unknownNumChar()
+        
+        return "(^\(PlateUA.series)" +
+            "|[\(PlateUA.prefixSeries)]\(unknownLetter)" +
+            "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
+            "|\(unknownLetter)\(unknownLetter))" +
+            "([\\d\(unknownNumber)]{4})" +
+            "(\(PlateUA.tails)" +
+            "|[\(PlateUA.allSymbols)]\(unknownLetter)" +
+            "|\(unknownLetter)[\(PlateUA.allSymbols)]" +
+        "|\(unknownLetter)\(unknownLetter))$"
+    }
+    
 }
 
 class PlateUAMotorcycle15 : PlateUAMotorcycle04

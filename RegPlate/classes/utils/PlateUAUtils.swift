@@ -259,6 +259,20 @@ struct PlateUAUtils : Plates
             result.append(plate)
         }
         
+        // 12.1 (2010)
+        plate = PlateUAStaff10(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+        
+        // 12.2 (2015)
+        plate = PlateUAStaffTemporary15(input: input)
+        if let value = plate.value
+        {
+            result.append(plate)
+        }
+        
         return result
     }
     
@@ -313,7 +327,8 @@ struct PlateUAUtils : Plates
             PlateUAConstants.PlateTypes.USA_Japan_15,
             PlateUAConstants.PlateTypes.Police_04,
             PlateUAConstants.PlateTypes.Police_15,
-            PlateUAConstants.PlateTypes.Diplomatic
+            PlateUAConstants.PlateTypes.Diplomatic,
+            PlateUAConstants.PlateTypes.Army_Volonter_14
                 :
                 
                 result.insert(PlateUAConstants.AutoTypes.Car)
@@ -345,6 +360,13 @@ struct PlateUAUtils : Plates
             PlateUAConstants.PlateTypes.Police_Head_15
                 :
                 result.insert(PlateUAConstants.AutoTypes.Car)
+            
+            case
+                PlateUAConstants.PlateTypes.Specific_10,
+                PlateUAConstants.PlateTypes.Specific_Temporary_15
+                :
+                result.insert(PlateUAConstants.AutoTypes.Track)
+                result.insert(PlateUAConstants.AutoTypes.Tracktor)
 
             
             default :
@@ -361,15 +383,6 @@ struct PlateUAUtils : Plates
 //            
 //            // 7.4
 //        case USA_Japan_Individual_04 = "7.4.04"
-//            
-//            // 9.1
-//        case Army_Volonter_14 = "9.1.14"
-//            
-//            // 12.1
-//        case Specific_10 = "12.1.10"
-//            
-//            // 12.2
-//        case Specific_Temporary_10 = "12.2.10"
         }
         
         return result

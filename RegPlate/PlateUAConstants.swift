@@ -120,7 +120,7 @@ class PlateUAConstants
         case Specific_10 = "12.1.10"
         
         // 12.2
-        case Specific_Temporary_10 = "12.2.10"
+        case Specific_Temporary_15 = "12.2.15"
         
         init()
         {
