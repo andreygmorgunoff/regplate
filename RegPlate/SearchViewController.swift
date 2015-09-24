@@ -15,6 +15,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet
     var tableView : UITableView!
     
+    var selected : NSIndexPath?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,6 +31,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -59,9 +66,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         return plates.count
     }
 
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let plate = plates[indexPath.row] as? PlateUAProtocol
+        
+        if (plate!.unique)
+        {
+            self.performSegueWithIdentifier("show", sender: indexPath)
+            
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+        
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -74,6 +89,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         plates = PlateUAUtils.plates(searchText);
         
         tableView.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "show")
+        {
+            let controller: PlateDetailsViewController = segue.destinationViewController as! PlateDetailsViewController
+            let indexPath = sender as! NSIndexPath
+            
+            controller.plate = plates[indexPath.row] as? PlateUAProtocol
+        }
     }
 }
 

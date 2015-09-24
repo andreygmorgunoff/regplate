@@ -142,52 +142,7 @@ class PlateUAStaffTemporary15 : PlateUAMotoTemporaryDealer15
     {
         return "  "
     }
-/*
-    override var body : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            let range = Range<String.Index>(start: advance(full.startIndex, 2), end: advance(full.startIndex, 4))
-            
-            result = full.substringWithRange(range)
-        }
-        
-        return result
-    }
-    
-    override var suffix : String?
-    {
-        var result : String? = super.value
-        
-        if let full = result
-        {
-            let index : String.Index = advance(full.endIndex, -4)
-            
-            result = full.substringFromIndex(index)
-        }
-        
-        return result
-    }
-    
-    override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
-    {
-        var result : PlateTemplatableCharType?
-        
-        switch (index)
-        {
-        case 4, 5, 6, 7:
-            result = PlateTemplatableCharType.Num
-        case 0, 1, 2, 3:
-            result = PlateTemplatableCharType.Letter
-        default:
-            result = nil
-        }
-        
-        return result
-    }
-*/
+
     override func region() -> PlateUAConstants.PlateRegions?
     {
         var result : PlateUAConstants.PlateRegions? = nil;

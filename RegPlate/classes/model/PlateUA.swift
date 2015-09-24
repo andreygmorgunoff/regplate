@@ -48,10 +48,12 @@ protocol PlateUAProtocol : PlateProtocol
     */
     var body  : String? { get }
     
+    var unique : Bool { get }
+    
     init(input : String)
 }
 
-class PlateUA : PlateUAProtocol
+class PlateUA : PlateUAProtocol, PlateTemplatable
 {
     /**
     * User number to check
@@ -286,4 +288,40 @@ class PlateUA : PlateUAProtocol
         return PlateUAConstants.PlateCountryType.Other
     }
     
+    var unique : Bool
+    {
+        let output : String = self.normalizedInput()
+        var result = false
+        
+        if output.rangeOfString(self.dynamicType.unknownNumChar()) == nil
+        {
+            if output.rangeOfString(self.dynamicType.unknownLetterChar()) == nil
+            {
+                result = true
+            }
+        }
+        
+        return result
+    }
+    
+    class func unknownNumChar() -> String
+    {
+        return "#"
+    }
+    
+    class func unknownLetterChar() -> String
+    {
+        return "*"
+    }
+    
+    class func maxLength() -> Int
+    {
+        return 0
+    }
+    
+    class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    {
+        return PlateTemplatableCharType.Num
+    }
+
 }

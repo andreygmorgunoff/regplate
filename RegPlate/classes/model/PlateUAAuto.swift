@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlateUAAuto04 : PlateUA, PlateTemplatable
+class PlateUAAuto04 : PlateUA
 {
     static let kMaxLength = 8;
     
@@ -60,22 +60,12 @@ class PlateUAAuto04 : PlateUA, PlateTemplatable
                "|\(unknownLetter)\(unknownLetter))$"
     }
     
-    class func unknownNumChar() -> String
-    {
-        return "#"
-    }
-    
-    class func unknownLetterChar() -> String
-    {
-        return "*"
-    }
-    
-    class func maxLength() -> Int
+    override class func maxLength() -> Int
     {
         return kMaxLength
     }
 
-    class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
+    override class func charTypeForCharIndex(index : Int) -> PlateTemplatableCharType?
     {
         var result : PlateTemplatableCharType?
         

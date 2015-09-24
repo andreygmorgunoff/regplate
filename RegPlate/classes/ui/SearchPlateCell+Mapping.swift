@@ -74,6 +74,16 @@ extension SearchPlateCell
             self.desc.text  = area
         }
         
+        if (plate.unique)
+        {
+            self.backgroundColor = UIColor.greenColor()
+        }
+        else
+        {
+            self.backgroundColor = UIColor.whiteColor()
+        }
+
+        
         self.updateMode(plate)
         self.updateOwnType(plate)
         self.updateAutoType(plate)
