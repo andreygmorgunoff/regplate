@@ -36,23 +36,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="2700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="145" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OSY-au-eKP">
+                            <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="uxB-qE-2TC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vlb-vT-RmD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="D4c-Tg-Y9i" id="cuy-Li-3bt"/>
+                                        </connections>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1871624579" green="0.43971515849999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="vlb-vT-RmD" secondAttribute="centerX" id="ENz-Ti-nGv"/>
+                                    <constraint firstItem="vlb-vT-RmD" firstAttribute="top" secondItem="uxB-qE-2TC" secondAttribute="top" id="GVG-wB-gJa"/>
+                                    <constraint firstAttribute="trailing" secondItem="vlb-vT-RmD" secondAttribute="trailing" id="LGe-C9-Uc9">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="44" id="N9y-Tm-BQD"/>
+                                    <constraint firstItem="vlb-vT-RmD" firstAttribute="leading" secondItem="uxB-qE-2TC" secondAttribute="leading" id="NpR-NB-9Hl">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="vlb-vT-RmD"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="N9y-Tm-BQD"/>
+                                        <exclude reference="ENz-Ti-nGv"/>
+                                        <exclude reference="GVG-wB-gJa"/>
+                                        <exclude reference="LGe-C9-Uc9"/>
+                                        <exclude reference="NpR-NB-9Hl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="vlb-vT-RmD"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="N9y-Tm-BQD"/>
+                                        <include reference="ENz-Ti-nGv"/>
+                                        <include reference="GVG-wB-gJa"/>
+                                        <include reference="LGe-C9-Uc9"/>
+                                        <include reference="NpR-NB-9Hl"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="145" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="OSY-au-eKP">
                                 <rect key="frame" x="0.0" y="0.0" width="400" height="2700"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.18127436490000001" blue="0.17762268819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" scopeBarBackgroundImage="1.1.04" showsScopeBar="YES" id="Nzm-QV-gwK">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <animations/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <scopeButtonTitles>
-                                        <string>Match</string>
-                                        <string>Book</string>
-                                    </scopeButtonTitles>
-                                    <connections>
-                                        <outlet property="delegate" destination="D4c-Tg-Y9i" id="Uxx-My-UdN"/>
-                                    </connections>
-                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchPlateCellIdentifier" rowHeight="136" id="NRC-vO-WDX" customClass="SearchPlateCell" customModule="RegPlate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -12278,15 +12312,50 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OSY-au-eKP" firstAttribute="top" secondItem="Yqz-Im-tFU" secondAttribute="bottom" constant="-20" id="BRd-5s-C7Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OSY-au-eKP" secondAttribute="trailing" constant="-16" id="Tc3-ux-6yf"/>
-                            <constraint firstItem="Cfr-e7-EMt" firstAttribute="top" secondItem="OSY-au-eKP" secondAttribute="bottom" id="qca-1Z-gAh"/>
-                            <constraint firstItem="OSY-au-eKP" firstAttribute="leading" secondItem="iyR-Vq-g6i" secondAttribute="leadingMargin" constant="-16" id="zz8-TK-MtN"/>
+                            <constraint firstItem="uxB-qE-2TC" firstAttribute="leading" secondItem="iyR-Vq-g6i" secondAttribute="leadingMargin" constant="-16" id="1ax-OD-N5n"/>
+                            <constraint firstItem="OSY-au-eKP" firstAttribute="leading" secondItem="iyR-Vq-g6i" secondAttribute="leadingMargin" constant="-16" id="D51-da-2w9"/>
+                            <constraint firstItem="uxB-qE-2TC" firstAttribute="top" secondItem="Yqz-Im-tFU" secondAttribute="bottom" constant="358" id="J8F-OG-dCN">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Cfr-e7-EMt" firstAttribute="top" secondItem="OSY-au-eKP" secondAttribute="bottom" id="YaW-wg-uSR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uxB-qE-2TC" secondAttribute="trailing" constant="-16" id="c2A-uq-Zg5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OSY-au-eKP" secondAttribute="trailing" constant="-16" id="fMe-Vl-w55"/>
+                            <constraint firstItem="OSY-au-eKP" firstAttribute="top" secondItem="uxB-qE-2TC" secondAttribute="bottom" id="ovC-HO-EKK">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uxB-qE-2TC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1ax-OD-N5n"/>
+                                <exclude reference="J8F-OG-dCN"/>
+                                <exclude reference="c2A-uq-Zg5"/>
+                                <exclude reference="D51-da-2w9"/>
+                                <exclude reference="fMe-Vl-w55"/>
+                                <exclude reference="ovC-HO-EKK"/>
+                                <exclude reference="YaW-wg-uSR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uxB-qE-2TC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1ax-OD-N5n"/>
+                                <include reference="J8F-OG-dCN"/>
+                                <include reference="c2A-uq-Zg5"/>
+                                <include reference="D51-da-2w9"/>
+                                <include reference="fMe-Vl-w55"/>
+                                <include reference="ovC-HO-EKK"/>
+                                <include reference="YaW-wg-uSR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="GvY-IL-Z32"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="400" height="2700"/>
+                    <size key="freeformSize" width="400" height="800"/>
                     <connections>
                         <outlet property="tableView" destination="OSY-au-eKP" id="i9I-Du-VpL"/>
                         <segue destination="nd0-dr-Cbc" kind="show" identifier="show" id="baO-4g-H6m"/>
@@ -12294,7 +12363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8b-fp-36F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-600" y="-45"/>
+            <point key="canvasLocation" x="-607.5" y="-33"/>
         </scene>
         <!--Plate Details View Controller-->
         <scene sceneID="9sP-qf-4cg">

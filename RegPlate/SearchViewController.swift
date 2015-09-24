@@ -20,8 +20,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        self.tableView.tableHeaderView = UIView(frame: CGRectMake(0, 0, 1, 1))
+        
+        // Do any additional setup after loading the view, typically from a nib.
         let insets = UIEdgeInsetsMake(0, 0, 216, 0);
         
         self.tableView.contentInset = insets
