@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f3o-Yo-Tqm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8P8-s6-2wh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6LL-YN-8dg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="0rz-YD-H05">
@@ -59,6 +60,9 @@
                                             <segment title="First"/>
                                             <segment title="Second"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="didChangedMode:" destination="D4c-Tg-Y9i" eventType="valueChanged" id="QoP-Us-J5i"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
@@ -122,13 +126,13 @@
                                 <exclude reference="qTH-2C-3KS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="15h-1M-8kU"/>
-                                <exclude reference="M7l-5h-qPK"/>
-                                <exclude reference="rcq-lh-OEh"/>
+                                <exclude reference="Neg-QU-NJ7"/>
                                 <exclude reference="6I3-JW-1e0"/>
                                 <exclude reference="Rfi-Iz-n6W"/>
                                 <exclude reference="tTB-nF-r0t"/>
-                                <exclude reference="Neg-QU-NJ7"/>
+                                <exclude reference="15h-1M-8kU"/>
+                                <exclude reference="M7l-5h-qPK"/>
+                                <exclude reference="rcq-lh-OEh"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -137,13 +141,13 @@
                                 <include reference="qTH-2C-3KS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="15h-1M-8kU"/>
-                                <include reference="M7l-5h-qPK"/>
-                                <include reference="rcq-lh-OEh"/>
+                                <include reference="Neg-QU-NJ7"/>
                                 <include reference="6I3-JW-1e0"/>
                                 <include reference="Rfi-Iz-n6W"/>
                                 <include reference="tTB-nF-r0t"/>
-                                <include reference="Neg-QU-NJ7"/>
+                                <include reference="15h-1M-8kU"/>
+                                <include reference="M7l-5h-qPK"/>
+                                <include reference="rcq-lh-OEh"/>
                             </mask>
                         </variation>
                     </view>
@@ -151,6 +155,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="800"/>
                     <connections>
+                        <outlet property="segmented" destination="e67-Aw-XlO" id="yZL-Go-VgI"/>
                         <outlet property="tableView" destination="0rz-YD-H05" id="EAd-uJ-fHo"/>
                         <segue destination="nd0-dr-Cbc" kind="show" identifier="show" id="baO-4g-H6m"/>
                     </connections>

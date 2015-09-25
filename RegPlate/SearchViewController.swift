@@ -10,10 +10,15 @@ import UIKit
 
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate
 {
-    var plates : [PlateProtocol] = []
+//    var plates : [PlateProtocol] = []
+    
+    let uaPlates = UAPlatesDataSource()
     
     @IBOutlet
     var tableView : UITableView!
+    
+    @IBOutlet
+    var segmented : UISegmentedControl!
     
     var selected : NSIndexPath?
     
@@ -44,6 +49,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.contentInset = insets
     }
 
+    @IBAction func didChangedMode(sender: AnyObject)
+    {
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -55,67 +65,89 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    // table delegate
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        var cell:UITableViewCell = UITableViewCell()
         
-        let cell:UITableViewCell
-        
-        if (indexPath.row < self.plates.count)
+        if (segmented.selectedSegmentIndex == 0)
         {
-            let plate = plates[indexPath.row] as! PlateUAProtocol
-            
-            let cellIdentifier = PlateUAUIUtils.cellIdentifierWithPlate(plate)
-
-            let uaCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SearchPlateCell
-            
-            uaCell.updateWithPlate(plate)
-            cell = uaCell
+            cell = uaPlates.tableView(tableView, cellForRowAtIndexPath: indexPath)
         }
         else
         {
-            cell = UITableViewCell()
+            // TODO:
         }
         
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        var result = 0
         
-        return plates.count
+        if (segmented.selectedSegmentIndex == 0)
+        {
+            result = uaPlates.tableView(tableView, numberOfRowsInSection: section)
+        }
+        else
+        {
+            // TODO:
+        }
+        
+        return result
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let plate = plates[indexPath.row] as? PlateUAProtocol
-        
-        if (plate!.unique)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if (segmented.selectedSegmentIndex == 0)
         {
-            self.performSegueWithIdentifier("show", sender: indexPath)
+            let plate = uaPlates.plates[indexPath.row] as? PlateUAProtocol
             
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            if (plate!.unique)
+            {
+                self.performSegueWithIdentifier("show", sender: indexPath)
+                
+            }
         }
+        else
+        {
+        }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        
+    override func prefersStatusBarHidden() -> Bool
+    {
         return false;
     }
     
+    // table search delegate
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
     {
-        plates = PlateUAUtils.plates(searchText);
+        if (segmented.selectedSegmentIndex == 0)
+        {
+            uaPlates.plates = PlateUAUtils.plates(searchText);
+        }
+        else
+        {
+        }
         
         tableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if (segue.identifier == "show")
+        if (segmented.selectedSegmentIndex == 0)
         {
-            let controller: PlateDetailsViewController = segue.destinationViewController as! PlateDetailsViewController
-            let indexPath = sender as! NSIndexPath
-            
-            controller.plate = plates[indexPath.row] as? PlateUAProtocol
+            if (segue.identifier == "show")
+            {
+                let controller: PlateDetailsViewController = segue.destinationViewController as! PlateDetailsViewController
+                let indexPath = sender as! NSIndexPath
+                
+                controller.plate = uaPlates.plates[indexPath.row] as? PlateUAProtocol
+            }
         }
     }
 }
