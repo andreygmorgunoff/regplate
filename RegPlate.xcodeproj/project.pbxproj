@@ -53,6 +53,38 @@
 		5FA1C9561BA1B7E800E8E8EB /* PlateUAAutoPolice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */; };
 		5FA1C9571BA1B7E800E8E8EB /* PlateUAAutoPolice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */; };
 		5FAF37681B8CC260000CABDA /* PlateUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */; };
+		5FB0E5D31BB573AE001BAD67 /* PlateCellType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D21BB573AE001BAD67 /* PlateCellType1.xib */; };
+		5FB0E5D41BB573AE001BAD67 /* PlateCellType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D21BB573AE001BAD67 /* PlateCellType1.xib */; };
+		5FB0E5D61BB577D5001BAD67 /* PlateCellType2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D51BB577D5001BAD67 /* PlateCellType2.xib */; };
+		5FB0E5D71BB577D5001BAD67 /* PlateCellType2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D51BB577D5001BAD67 /* PlateCellType2.xib */; };
+		5FB0E5D91BB5781D001BAD67 /* PlateCellType3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D81BB5781D001BAD67 /* PlateCellType3.xib */; };
+		5FB0E5DA1BB5781D001BAD67 /* PlateCellType3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D81BB5781D001BAD67 /* PlateCellType3.xib */; };
+		5FB0E5DC1BB5789E001BAD67 /* PlateCellType4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5DB1BB5789E001BAD67 /* PlateCellType4.xib */; };
+		5FB0E5DD1BB5789E001BAD67 /* PlateCellType4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5DB1BB5789E001BAD67 /* PlateCellType4.xib */; };
+		5FB0E5DF1BB578DA001BAD67 /* PlateCellType5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5DE1BB578DA001BAD67 /* PlateCellType5.xib */; };
+		5FB0E5E01BB578DA001BAD67 /* PlateCellType5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5DE1BB578DA001BAD67 /* PlateCellType5.xib */; };
+		5FB0E5E21BB57914001BAD67 /* PlateCellType6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5E11BB57914001BAD67 /* PlateCellType6.xib */; };
+		5FB0E5E31BB57914001BAD67 /* PlateCellType6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5E11BB57914001BAD67 /* PlateCellType6.xib */; };
+		5FB0E5E51BB57A63001BAD67 /* PlateCellType7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5E41BB57A63001BAD67 /* PlateCellType7.xib */; };
+		5FB0E5E61BB57A63001BAD67 /* PlateCellType7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5E41BB57A63001BAD67 /* PlateCellType7.xib */; };
+		5FB0E5E81BB57ACD001BAD67 /* PlateCellType8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5E71BB57ACD001BAD67 /* PlateCellType8.xib */; };
+		5FB0E5E91BB57ACD001BAD67 /* PlateCellType8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5E71BB57ACD001BAD67 /* PlateCellType8.xib */; };
+		5FB0E5EB1BB57B5F001BAD67 /* PlateCellType9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5EA1BB57B5F001BAD67 /* PlateCellType9.xib */; };
+		5FB0E5EC1BB57B5F001BAD67 /* PlateCellType9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5EA1BB57B5F001BAD67 /* PlateCellType9.xib */; };
+		5FB0E5EE1BB57BCD001BAD67 /* PlateCellType10.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5ED1BB57BCD001BAD67 /* PlateCellType10.xib */; };
+		5FB0E5EF1BB57BCD001BAD67 /* PlateCellType10.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5ED1BB57BCD001BAD67 /* PlateCellType10.xib */; };
+		5FB0E5F11BB57C1C001BAD67 /* PlateCellType11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F01BB57C1C001BAD67 /* PlateCellType11.xib */; };
+		5FB0E5F21BB57C1C001BAD67 /* PlateCellType11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F01BB57C1C001BAD67 /* PlateCellType11.xib */; };
+		5FB0E5F41BB57C74001BAD67 /* PlateCellType12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F31BB57C74001BAD67 /* PlateCellType12.xib */; };
+		5FB0E5F51BB57C74001BAD67 /* PlateCellType12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F31BB57C74001BAD67 /* PlateCellType12.xib */; };
+		5FB0E5F71BB57CB6001BAD67 /* PlateCellType13.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F61BB57CB6001BAD67 /* PlateCellType13.xib */; };
+		5FB0E5F81BB57CB6001BAD67 /* PlateCellType13.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F61BB57CB6001BAD67 /* PlateCellType13.xib */; };
+		5FB0E5FA1BB57D62001BAD67 /* PlateCellType14.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F91BB57D62001BAD67 /* PlateCellType14.xib */; };
+		5FB0E5FB1BB57D62001BAD67 /* PlateCellType14.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5F91BB57D62001BAD67 /* PlateCellType14.xib */; };
+		5FB0E5FD1BB57DD8001BAD67 /* PlateCellType15.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5FC1BB57DD8001BAD67 /* PlateCellType15.xib */; };
+		5FB0E5FE1BB57DD8001BAD67 /* PlateCellType15.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5FC1BB57DD8001BAD67 /* PlateCellType15.xib */; };
+		5FB0E6001BB57E2C001BAD67 /* PlateCellType16.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5FF1BB57E2C001BAD67 /* PlateCellType16.xib */; };
+		5FB0E6011BB57E2C001BAD67 /* PlateCellType16.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5FF1BB57E2C001BAD67 /* PlateCellType16.xib */; };
 		5FC109B11B8F103700FB080B /* PlateUAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC109B01B8F103700FB080B /* PlateUAConstants.swift */; };
 		5FCE8FA61B904207006AD14F /* PlateUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */; };
 		5FCE8FA81B90426E006AD14F /* PlateUAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC109B01B8F103700FB080B /* PlateUAConstants.swift */; };
@@ -114,6 +146,22 @@
 		5FA1C9501BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SearchPlateCell+Mapping.swift"; path = "classes/ui/SearchPlateCell+Mapping.swift"; sourceTree = "<group>"; };
 		5FA1C9551BA1B7E800E8E8EB /* PlateUAAutoPolice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoPolice.swift; path = classes/model/PlateUAAutoPolice.swift; sourceTree = "<group>"; };
 		5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAUtils.swift; path = classes/utils/PlateUAUtils.swift; sourceTree = "<group>"; };
+		5FB0E5D21BB573AE001BAD67 /* PlateCellType1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType1.xib; path = classes/ui/xib/PlateCellType1.xib; sourceTree = "<group>"; };
+		5FB0E5D51BB577D5001BAD67 /* PlateCellType2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType2.xib; path = classes/ui/xib/PlateCellType2.xib; sourceTree = "<group>"; };
+		5FB0E5D81BB5781D001BAD67 /* PlateCellType3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType3.xib; path = classes/ui/xib/PlateCellType3.xib; sourceTree = "<group>"; };
+		5FB0E5DB1BB5789E001BAD67 /* PlateCellType4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType4.xib; path = classes/ui/xib/PlateCellType4.xib; sourceTree = "<group>"; };
+		5FB0E5DE1BB578DA001BAD67 /* PlateCellType5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType5.xib; path = classes/ui/xib/PlateCellType5.xib; sourceTree = "<group>"; };
+		5FB0E5E11BB57914001BAD67 /* PlateCellType6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType6.xib; path = classes/ui/xib/PlateCellType6.xib; sourceTree = "<group>"; };
+		5FB0E5E41BB57A63001BAD67 /* PlateCellType7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType7.xib; path = classes/ui/xib/PlateCellType7.xib; sourceTree = "<group>"; };
+		5FB0E5E71BB57ACD001BAD67 /* PlateCellType8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType8.xib; path = classes/ui/xib/PlateCellType8.xib; sourceTree = "<group>"; };
+		5FB0E5EA1BB57B5F001BAD67 /* PlateCellType9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType9.xib; path = classes/ui/xib/PlateCellType9.xib; sourceTree = "<group>"; };
+		5FB0E5ED1BB57BCD001BAD67 /* PlateCellType10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType10.xib; path = classes/ui/xib/PlateCellType10.xib; sourceTree = "<group>"; };
+		5FB0E5F01BB57C1C001BAD67 /* PlateCellType11.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType11.xib; path = classes/ui/xib/PlateCellType11.xib; sourceTree = "<group>"; };
+		5FB0E5F31BB57C74001BAD67 /* PlateCellType12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType12.xib; path = classes/ui/xib/PlateCellType12.xib; sourceTree = "<group>"; };
+		5FB0E5F61BB57CB6001BAD67 /* PlateCellType13.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType13.xib; path = classes/ui/xib/PlateCellType13.xib; sourceTree = "<group>"; };
+		5FB0E5F91BB57D62001BAD67 /* PlateCellType14.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType14.xib; path = classes/ui/xib/PlateCellType14.xib; sourceTree = "<group>"; };
+		5FB0E5FC1BB57DD8001BAD67 /* PlateCellType15.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType15.xib; path = classes/ui/xib/PlateCellType15.xib; sourceTree = "<group>"; };
+		5FB0E5FF1BB57E2C001BAD67 /* PlateCellType16.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType16.xib; path = classes/ui/xib/PlateCellType16.xib; sourceTree = "<group>"; };
 		5FC109B01B8F103700FB080B /* PlateUAConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUAConstants.swift; sourceTree = "<group>"; };
 		5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoArmy.swift; path = classes/model/PlateUAAutoArmy.swift; sourceTree = "<group>"; };
 		5FF77B971B85AF8D00DCA2A4 /* Plate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plate.swift; path = classes/model/Plate.swift; sourceTree = "<group>"; };
@@ -214,6 +262,7 @@
 		5FA1C94C1BA1622900E8E8EB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5FB0E5D11BB5738B001BAD67 /* xib */,
 				5FA1C94D1BA1625100E8E8EB /* PlateUAUIUtils.swift */,
 				5F23F9561B834EE600E221D1 /* SearchViewController.swift */,
 				5F23F9741B83871900E221D1 /* SearchPlateCell.swift */,
@@ -221,6 +270,29 @@
 				5F44800A1BB2826B00CC1DB6 /* PlateDetailsViewController.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		5FB0E5D11BB5738B001BAD67 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				5FB0E5D21BB573AE001BAD67 /* PlateCellType1.xib */,
+				5FB0E5D51BB577D5001BAD67 /* PlateCellType2.xib */,
+				5FB0E5D81BB5781D001BAD67 /* PlateCellType3.xib */,
+				5FB0E5DB1BB5789E001BAD67 /* PlateCellType4.xib */,
+				5FB0E5DE1BB578DA001BAD67 /* PlateCellType5.xib */,
+				5FB0E5E11BB57914001BAD67 /* PlateCellType6.xib */,
+				5FB0E5E41BB57A63001BAD67 /* PlateCellType7.xib */,
+				5FB0E5E71BB57ACD001BAD67 /* PlateCellType8.xib */,
+				5FB0E5EA1BB57B5F001BAD67 /* PlateCellType9.xib */,
+				5FB0E5ED1BB57BCD001BAD67 /* PlateCellType10.xib */,
+				5FB0E5F01BB57C1C001BAD67 /* PlateCellType11.xib */,
+				5FB0E5F31BB57C74001BAD67 /* PlateCellType12.xib */,
+				5FB0E5F61BB57CB6001BAD67 /* PlateCellType13.xib */,
+				5FB0E5F91BB57D62001BAD67 /* PlateCellType14.xib */,
+				5FB0E5FC1BB57DD8001BAD67 /* PlateCellType15.xib */,
+				5FB0E5FF1BB57E2C001BAD67 /* PlateCellType16.xib */,
+			);
+			name = xib;
 			sourceTree = "<group>";
 		};
 		5FF77B961B85AF6E00DCA2A4 /* Model */ = {
@@ -338,8 +410,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB0E5F71BB57CB6001BAD67 /* PlateCellType13.xib in Resources */,
+				5FB0E5FA1BB57D62001BAD67 /* PlateCellType14.xib in Resources */,
+				5FB0E5DF1BB578DA001BAD67 /* PlateCellType5.xib in Resources */,
+				5FB0E5DC1BB5789E001BAD67 /* PlateCellType4.xib in Resources */,
+				5FB0E5E51BB57A63001BAD67 /* PlateCellType7.xib in Resources */,
+				5FB0E5D31BB573AE001BAD67 /* PlateCellType1.xib in Resources */,
+				5FB0E5F11BB57C1C001BAD67 /* PlateCellType11.xib in Resources */,
 				5F23F95A1B834EE600E221D1 /* Main.storyboard in Resources */,
+				5FB0E5D91BB5781D001BAD67 /* PlateCellType3.xib in Resources */,
+				5FB0E5E21BB57914001BAD67 /* PlateCellType6.xib in Resources */,
+				5FB0E5FD1BB57DD8001BAD67 /* PlateCellType15.xib in Resources */,
+				5FB0E5EE1BB57BCD001BAD67 /* PlateCellType10.xib in Resources */,
+				5FB0E6001BB57E2C001BAD67 /* PlateCellType16.xib in Resources */,
+				5FB0E5E81BB57ACD001BAD67 /* PlateCellType8.xib in Resources */,
+				5FB0E5EB1BB57B5F001BAD67 /* PlateCellType9.xib in Resources */,
+				5FB0E5D61BB577D5001BAD67 /* PlateCellType2.xib in Resources */,
 				5F23F95F1B834EE600E221D1 /* LaunchScreen.xib in Resources */,
+				5FB0E5F41BB57C74001BAD67 /* PlateCellType12.xib in Resources */,
 				5F23F95C1B834EE600E221D1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +436,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB0E5D41BB573AE001BAD67 /* PlateCellType1.xib in Resources */,
+				5FB0E5FB1BB57D62001BAD67 /* PlateCellType14.xib in Resources */,
+				5FB0E5D71BB577D5001BAD67 /* PlateCellType2.xib in Resources */,
+				5FB0E6011BB57E2C001BAD67 /* PlateCellType16.xib in Resources */,
+				5FB0E5EC1BB57B5F001BAD67 /* PlateCellType9.xib in Resources */,
+				5FB0E5E01BB578DA001BAD67 /* PlateCellType5.xib in Resources */,
+				5FB0E5E91BB57ACD001BAD67 /* PlateCellType8.xib in Resources */,
+				5FB0E5EF1BB57BCD001BAD67 /* PlateCellType10.xib in Resources */,
+				5FB0E5F21BB57C1C001BAD67 /* PlateCellType11.xib in Resources */,
+				5FB0E5F51BB57C74001BAD67 /* PlateCellType12.xib in Resources */,
+				5FB0E5DA1BB5781D001BAD67 /* PlateCellType3.xib in Resources */,
+				5FB0E5FE1BB57DD8001BAD67 /* PlateCellType15.xib in Resources */,
+				5FB0E5DD1BB5789E001BAD67 /* PlateCellType4.xib in Resources */,
+				5FB0E5E61BB57A63001BAD67 /* PlateCellType7.xib in Resources */,
+				5FB0E5F81BB57CB6001BAD67 /* PlateCellType13.xib in Resources */,
+				5FB0E5E31BB57914001BAD67 /* PlateCellType6.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
