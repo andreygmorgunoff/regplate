@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class UAPlatesDataSource : NSObject, UITableViewDataSource, UITableViewDelegate
+protocol PlatesDataSourceProtocol : UITableViewDataSource, UITableViewDelegate
+{
+    func filter(pattern : String)
+}
+
+class UAPlatesDataSource : NSObject, PlatesDataSourceProtocol
 {
     var plates : [PlateProtocol] = []
     
@@ -40,5 +45,10 @@ class UAPlatesDataSource : NSObject, UITableViewDataSource, UITableViewDelegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return plates.count
+    }
+    
+    func filter(pattern : String)
+    {
+        // TODO:should be override with child
     }
 }

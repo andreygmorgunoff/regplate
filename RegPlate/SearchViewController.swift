@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import CoreData
+
+enum SearchViewControllerMode : Int
+{
+    case UAPlates = 0, UserSavedPlates
+}
 
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate
 {
-//    var plates : [PlateProtocol] = []
+    let uaPlates = SearchUAPlatesDataSource()
+    let userPlates = UserUAPlatesDataSource()
     
-    let uaPlates = UAPlatesDataSource()
+    var currentPlates : UAPlatesDataSource
     
     @IBOutlet
     var tableView : UITableView!
@@ -22,26 +29,23 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var selected : NSIndexPath?
     
+    func isSearchUAPlatesMode() -> Bool
+    {
+        return (segmented.selectedSegmentIndex == SearchViewControllerMode.UAPlates.rawValue)
+    }
+    
+    required init(coder aDecoder: NSCoder)
+    {
+        currentPlates = uaPlates
+        
+        super.init(coder : aDecoder)
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        self.tableView.registerNib(UINib(nibName: "PlateCellType1", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType2", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier2")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType3", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier3")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType4", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier4")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType5", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier5")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType6", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier6")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType7", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier7")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType8", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier8")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType9", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier9")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType10", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier10")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType11", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier11")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType12", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier12")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType13", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier13")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType14", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier14")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType15", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier15")
-        self.tableView.registerNib(UINib(nibName: "PlateCellType16", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier16")
+        PlateUAUIUtils.registerUAPlateCells(self.tableView)
         
         // Do any additional setup after loading the view, typically from a nib.
         let insets = UIEdgeInsetsMake(0, 0, 216, 0);
@@ -49,8 +53,18 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.contentInset = insets
     }
 
+    
     @IBAction func didChangedMode(sender: AnyObject)
     {
+        if isSearchUAPlatesMode()
+        {
+            currentPlates = uaPlates
+        }
+        else
+        {
+            currentPlates = userPlates
+        }
+        
         self.tableView.reloadData()
     }
     
@@ -68,41 +82,23 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     // table delegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell:UITableViewCell = UITableViewCell()
-        
-        if (segmented.selectedSegmentIndex == 0)
-        {
-            cell = uaPlates.tableView(tableView, cellForRowAtIndexPath: indexPath)
-        }
-        else
-        {
-            // TODO:
-        }
+        var cell = currentPlates.tableView(tableView, cellForRowAtIndexPath: indexPath)
         
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        var result = 0
-        
-        if (segmented.selectedSegmentIndex == 0)
-        {
-            result = uaPlates.tableView(tableView, numberOfRowsInSection: section)
-        }
-        else
-        {
-            // TODO:
-        }
+        var result = currentPlates.tableView(tableView, numberOfRowsInSection: section)
         
         return result
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        if (segmented.selectedSegmentIndex == 0)
+        if (isSearchUAPlatesMode())
         {
-            let plate = uaPlates.plates[indexPath.row] as? PlateUAProtocol
+            let plate = currentPlates.plates[indexPath.row] as? PlateUAProtocol
             
             if (plate!.unique)
             {
@@ -126,27 +122,21 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     // table search delegate
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
     {
-        if (segmented.selectedSegmentIndex == 0)
-        {
-            uaPlates.plates = PlateUAUtils.plates(searchText);
-        }
-        else
-        {
-        }
+        currentPlates.filter(searchText)
         
         tableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if (segmented.selectedSegmentIndex == 0)
+        if (isSearchUAPlatesMode())
         {
             if (segue.identifier == "show")
             {
                 let controller: PlateDetailsViewController = segue.destinationViewController as! PlateDetailsViewController
                 let indexPath = sender as! NSIndexPath
                 
-                controller.plate = uaPlates.plates[indexPath.row] as? PlateUAProtocol
+                controller.plate = currentPlates.plates[indexPath.row] as? PlateUAProtocol
             }
         }
     }

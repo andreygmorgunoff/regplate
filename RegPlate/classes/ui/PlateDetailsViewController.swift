@@ -9,9 +9,14 @@
 import UIKit
 import CoreData
 
-class PlateDetailsViewController: UIViewController
+class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    @IBOutlet
+    var tableView : UITableView!
+    
     var plate : PlateUAProtocol?
+    
+    var plates : UAPlatesDataSource?
     
     override func viewDidLoad()
     {
@@ -20,6 +25,11 @@ class PlateDetailsViewController: UIViewController
         // Do any additional setup after loading the view.
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        plates = UAPlatesDataSource()
+        plates!.plates.append(plate!)
+        
+        PlateUAUIUtils.registerUAPlateCells(self.tableView)
     }
 
     override func didReceiveMemoryWarning()
@@ -75,5 +85,23 @@ class PlateDetailsViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // table delegate
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        var cell:UITableViewCell = UITableViewCell()
+        
+        cell = plates!.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        var result = 0
+        
+        result = plates!.tableView(tableView, numberOfRowsInSection: section)
+        
+        return result
+    }
 }

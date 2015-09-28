@@ -7,9 +7,30 @@
 //
 
 import Foundation
+import UIKit
 
 struct PlateUAUIUtils
 {
+    static func registerUAPlateCells(tableView : UITableView)
+    {
+        tableView.registerNib(UINib(nibName: "PlateCellType1", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier")
+        tableView.registerNib(UINib(nibName: "PlateCellType2", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier2")
+        tableView.registerNib(UINib(nibName: "PlateCellType3", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier3")
+        tableView.registerNib(UINib(nibName: "PlateCellType4", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier4")
+        tableView.registerNib(UINib(nibName: "PlateCellType5", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier5")
+        tableView.registerNib(UINib(nibName: "PlateCellType6", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier6")
+        tableView.registerNib(UINib(nibName: "PlateCellType7", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier7")
+        tableView.registerNib(UINib(nibName: "PlateCellType8", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier8")
+        tableView.registerNib(UINib(nibName: "PlateCellType9", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier9")
+        tableView.registerNib(UINib(nibName: "PlateCellType10", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier10")
+        tableView.registerNib(UINib(nibName: "PlateCellType11", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier11")
+        tableView.registerNib(UINib(nibName: "PlateCellType12", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier12")
+        tableView.registerNib(UINib(nibName: "PlateCellType13", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier13")
+        tableView.registerNib(UINib(nibName: "PlateCellType14", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier14")
+        tableView.registerNib(UINib(nibName: "PlateCellType15", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier15")
+        tableView.registerNib(UINib(nibName: "PlateCellType16", bundle: nil), forCellReuseIdentifier: "searchPlateCellIdentifier16")
+    }
+    
     static func cellIdentifierWithPlate(plate : PlateProtocol) -> String
     {
         var cellIdentifier = "searchPlateCellIdentifier"

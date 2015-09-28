@@ -59,10 +59,6 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
     * User number to check
     */
     let input : String
-    /**
-    * Parsed pattern
-    */
-    var cachedValue : String?
     
     static let prefixSeries : String =
         "ABCIHK"
@@ -197,11 +193,7 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
         {
             let matched : Bool = self.match(result!)
             
-            if (matched)
-            {
-                cachedValue = result
-            }
-            else
+            if (!matched)
             {
                 result = nil
             }
@@ -212,7 +204,7 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
     
     var prefix : String?
     {
-        var result : String? = cachedValue
+        var result : String? = value
         
         if let full = result
         {
@@ -226,7 +218,7 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
     
     var suffix : String?
     {
-        var result : String? = cachedValue
+        var result : String? = value
         
         if let full = result
         {
@@ -240,7 +232,7 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
     
     var body : String?
     {
-        var result : String? = cachedValue
+        var result : String? = value
         
         if let full = result
         {

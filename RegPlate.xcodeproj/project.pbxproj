@@ -87,6 +87,10 @@
 		5FB0E6011BB57E2C001BAD67 /* PlateCellType16.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5FF1BB57E2C001BAD67 /* PlateCellType16.xib */; };
 		5FB0E6041BB5888A001BAD67 /* UAPlatesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0E6031BB5888A001BAD67 /* UAPlatesDataSource.swift */; };
 		5FB0E6051BB5888A001BAD67 /* UAPlatesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0E6031BB5888A001BAD67 /* UAPlatesDataSource.swift */; };
+		5FB0E6071BB97954001BAD67 /* SearchUAPlatesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0E6061BB97954001BAD67 /* SearchUAPlatesDataSource.swift */; };
+		5FB0E6081BB97954001BAD67 /* SearchUAPlatesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0E6061BB97954001BAD67 /* SearchUAPlatesDataSource.swift */; };
+		5FB0E60A1BB97AFE001BAD67 /* UserUAPlatesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0E6091BB97AFE001BAD67 /* UserUAPlatesDataSource.swift */; };
+		5FB0E60B1BB97AFE001BAD67 /* UserUAPlatesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0E6091BB97AFE001BAD67 /* UserUAPlatesDataSource.swift */; };
 		5FC109B11B8F103700FB080B /* PlateUAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC109B01B8F103700FB080B /* PlateUAConstants.swift */; };
 		5FCE8FA61B904207006AD14F /* PlateUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */; };
 		5FCE8FA81B90426E006AD14F /* PlateUAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC109B01B8F103700FB080B /* PlateUAConstants.swift */; };
@@ -165,6 +169,8 @@
 		5FB0E5FC1BB57DD8001BAD67 /* PlateCellType15.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType15.xib; path = classes/ui/xib/PlateCellType15.xib; sourceTree = "<group>"; };
 		5FB0E5FF1BB57E2C001BAD67 /* PlateCellType16.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType16.xib; path = classes/ui/xib/PlateCellType16.xib; sourceTree = "<group>"; };
 		5FB0E6031BB5888A001BAD67 /* UAPlatesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UAPlatesDataSource.swift; path = classes/model/datasource/UAPlatesDataSource.swift; sourceTree = "<group>"; };
+		5FB0E6061BB97954001BAD67 /* SearchUAPlatesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchUAPlatesDataSource.swift; path = classes/model/datasource/SearchUAPlatesDataSource.swift; sourceTree = "<group>"; };
+		5FB0E6091BB97AFE001BAD67 /* UserUAPlatesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserUAPlatesDataSource.swift; path = classes/model/datasource/UserUAPlatesDataSource.swift; sourceTree = "<group>"; };
 		5FC109B01B8F103700FB080B /* PlateUAConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUAConstants.swift; sourceTree = "<group>"; };
 		5FE8CB2A1BA85F63005D4866 /* PlateUAAutoArmy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoArmy.swift; path = classes/model/PlateUAAutoArmy.swift; sourceTree = "<group>"; };
 		5FF77B971B85AF8D00DCA2A4 /* Plate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plate.swift; path = classes/model/Plate.swift; sourceTree = "<group>"; };
@@ -302,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				5FB0E6031BB5888A001BAD67 /* UAPlatesDataSource.swift */,
+				5FB0E6061BB97954001BAD67 /* SearchUAPlatesDataSource.swift */,
+				5FB0E6091BB97AFE001BAD67 /* UserUAPlatesDataSource.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -479,6 +487,7 @@
 				5F03B0FB1B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift in Sources */,
 				5F68BDFE1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift in Sources */,
 				5FC109B11B8F103700FB080B /* PlateUAConstants.swift in Sources */,
+				5FB0E6071BB97954001BAD67 /* SearchUAPlatesDataSource.swift in Sources */,
 				5F8073C61BB3D4F400B4D27F /* TPlate.swift in Sources */,
 				5F23F9751B83871900E221D1 /* SearchPlateCell.swift in Sources */,
 				5F03B0F91B99AEBB002FE30D /* PlateUAMotoTemporary.swift in Sources */,
@@ -487,6 +496,7 @@
 				5F03B0F51B99A395002FE30D /* PlateUAMoto.swift in Sources */,
 				5FF77B9A1B85B03B00DCA2A4 /* PlateUA.swift in Sources */,
 				5F8DDC441BA0663400294323 /* PlateUAMotorcycleTemporaryDealer.swift in Sources */,
+				5FB0E60A1BB97AFE001BAD67 /* UserUAPlatesDataSource.swift in Sources */,
 				5F23F9571B834EE600E221D1 /* SearchViewController.swift in Sources */,
 				5FF77BA11B85D4A500DCA2A4 /* PlateUAAuto.swift in Sources */,
 				5F3209B01B946D620058C193 /* PlateUAAutoTaxi.swift in Sources */,
@@ -516,6 +526,7 @@
 				5F03B0FC1B99AEBB002FE30D /* PlateUAMotoTemporaryDealer.swift in Sources */,
 				5F3209B71B982D990058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */,
 				5F44800C1BB2826B00CC1DB6 /* PlateDetailsViewController.swift in Sources */,
+				5FB0E60B1BB97AFE001BAD67 /* UserUAPlatesDataSource.swift in Sources */,
 				5F3209B41B97527D0058C193 /* PlateUAAutoTemporary.swift in Sources */,
 				5FF77BB71B85FD4F00DCA2A4 /* RegExp.swift in Sources */,
 				5F8DDC451BA067BB00294323 /* PlateUAMotorcycle.swift in Sources */,
@@ -536,6 +547,7 @@
 				5FCE8FA81B90426E006AD14F /* PlateUAConstants.swift in Sources */,
 				5F8DDC3C1B9EF33B00294323 /* PlateUATests.swift in Sources */,
 				5F8DDC461BA067BD00294323 /* PlateUAMotorcycleTemporary.swift in Sources */,
+				5FB0E6081BB97954001BAD67 /* SearchUAPlatesDataSource.swift in Sources */,
 				5FA1C9521BA1646B00E8E8EB /* SearchPlateCell+Mapping.swift in Sources */,
 				5F03B0F61B99A457002FE30D /* PlateUAMoto.swift in Sources */,
 				5F4480091BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */,

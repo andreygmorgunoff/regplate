@@ -57,8 +57,8 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e67-Aw-XlO">
                                         <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="Search"/>
+                                            <segment title="Book"/>
                                         </segments>
                                         <connections>
                                             <action selector="didChangedMode:" destination="D4c-Tg-Y9i" eventType="valueChanged" id="QoP-Us-J5i"/>
@@ -176,6 +176,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="135" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="xmk-BB-pYf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="HCs-Pn-Wg0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HCs-Pn-Wg0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="HCs-Pn-Wg0"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="nd0-dr-Cbc" id="aKa-bb-aT0"/>
+                                    <outlet property="delegate" destination="nd0-dr-Cbc" id="0Wt-fD-teb"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="34" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIV-Kb-Leb">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Save">
@@ -196,60 +217,48 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AA0000EE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cou-gV-deO">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BWM-Gn-eq1">
-                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="148" y="124" width="123" height="29"/>
-                                </variation>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xmk-BB-pYf" secondAttribute="trailing" constant="-16" id="0e7-wC-JEY"/>
+                            <constraint firstItem="xmk-BB-pYf" firstAttribute="top" secondItem="Gly-Jm-4eC" secondAttribute="bottom" constant="24" id="0vB-HD-Rx0"/>
                             <constraint firstAttribute="centerX" secondItem="EIV-Kb-Leb" secondAttribute="centerX" id="8FT-nb-8wz"/>
-                            <constraint firstItem="EIV-Kb-Leb" firstAttribute="top" secondItem="Cou-gV-deO" secondAttribute="bottom" constant="143" id="DPZ-I0-Tj7"/>
-                            <constraint firstAttribute="centerX" secondItem="Cou-gV-deO" secondAttribute="centerX" id="Onh-4d-EA5"/>
-                            <constraint firstItem="Cou-gV-deO" firstAttribute="top" secondItem="Gly-Jm-4eC" secondAttribute="bottom" constant="49" id="pJj-De-qWr"/>
+                            <constraint firstItem="EIV-Kb-Leb" firstAttribute="top" secondItem="xmk-BB-pYf" secondAttribute="bottom" constant="54" id="BKF-xJ-5Pf"/>
+                            <constraint firstItem="xmk-BB-pYf" firstAttribute="leading" secondItem="bcQ-jh-rFV" secondAttribute="leadingMargin" constant="-16" id="gZt-pw-PUV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="xmk-BB-pYf"/>
                                 <exclude reference="EIV-Kb-Leb"/>
                                 <exclude reference="nhN-Oa-Hry"/>
-                                <exclude reference="Cou-gV-deO"/>
-                                <exclude reference="BWM-Gn-eq1"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Onh-4d-EA5"/>
-                                <exclude reference="pJj-De-qWr"/>
+                                <exclude reference="0e7-wC-JEY"/>
+                                <exclude reference="0vB-HD-Rx0"/>
+                                <exclude reference="gZt-pw-PUV"/>
                                 <exclude reference="8FT-nb-8wz"/>
-                                <exclude reference="DPZ-I0-Tj7"/>
+                                <exclude reference="BKF-xJ-5Pf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="xmk-BB-pYf"/>
                                 <include reference="EIV-Kb-Leb"/>
                                 <include reference="nhN-Oa-Hry"/>
-                                <include reference="Cou-gV-deO"/>
-                                <include reference="BWM-Gn-eq1"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Onh-4d-EA5"/>
-                                <include reference="pJj-De-qWr"/>
+                                <include reference="0e7-wC-JEY"/>
+                                <include reference="0vB-HD-Rx0"/>
+                                <include reference="gZt-pw-PUV"/>
                                 <include reference="8FT-nb-8wz"/>
-                                <include reference="DPZ-I0-Tj7"/>
+                                <include reference="BKF-xJ-5Pf"/>
                             </mask>
                         </variation>
                     </view>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="xmk-BB-pYf" id="qlf-gk-463"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WX-Qr-0BH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
