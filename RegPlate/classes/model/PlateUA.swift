@@ -296,6 +296,19 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
         return result
     }
     
+    func isEqualTo(plate : PlateProtocol) -> Bool
+    {
+        var result = false
+        
+        if (plate.value == self.value) && (self.isKindOfClass(plate.dynamicType))
+        {
+            result = true
+        }
+        
+        return result
+    }
+
+    
     class func unknownNumChar() -> String
     {
         return "#"

@@ -27,6 +27,7 @@ protocol PlateProtocol
     */
     var year   : String? { get }
     
+    func isEqualTo(plate : PlateProtocol) -> Bool
 }
 
 enum PlateTemplatableCharType : Int

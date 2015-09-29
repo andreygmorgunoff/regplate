@@ -77,4 +77,20 @@ class UserUAPlatesDataSource : UAPlatesDataSource
     {
         updatePlates()
     }
+    
+    func hasPlate(plate : PlateProtocol) -> Bool
+    {
+        var result = false
+        
+        for item : PlateProtocol in self.plates
+        {
+            if (item.isEqualTo(plate))
+            {
+                result = true
+                break
+            }
+        }
+        
+        return result
+    }
 }
