@@ -17,7 +17,7 @@ class PlateUAAutoDiplomatic04_13 : PlateUAAuto04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Diplomatic
+        uaType = PlateUAConstants.PlateTypes.Diplomatic
     }
     
     override class func regexp() -> String?

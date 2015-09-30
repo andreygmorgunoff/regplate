@@ -14,7 +14,7 @@ class PlateUAAutoArmy95 : PlateUAAutoPolice04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Army_95
+        uaType = PlateUAConstants.PlateTypes.Army_95
     }
     
     override class func regexp() -> String?
@@ -109,7 +109,7 @@ class PlateUAAutoArmyMoto95 : PlateUAAutoArmy95
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Army_Moto_95
+        uaType = PlateUAConstants.PlateTypes.Army_Moto_95
     }
 }
 
@@ -119,7 +119,7 @@ class PlateUAAutoArmyHead07 : PlateUAAutoArmy95
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Army_Head_07
+        uaType = PlateUAConstants.PlateTypes.Army_Head_07
     }
 }
 
@@ -129,7 +129,7 @@ class PlateUAAutoArmyVolonter14 : PlateUAAutoArmy95
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Army_Volonter_14
+        uaType = PlateUAConstants.PlateTypes.Army_Volonter_14
     }
     
     override class func regexp() -> String?

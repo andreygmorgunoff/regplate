@@ -14,7 +14,7 @@ class PlateUAMotorcycle04 : PlateUAMoto04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Motorcycle_04
+        uaType = PlateUAConstants.PlateTypes.Motorcycle_04
     }
     
     override var body : String?
@@ -106,6 +106,6 @@ class PlateUAMotorcycle15 : PlateUAMotorcycle04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Motorcycle_15
+        uaType = PlateUAConstants.PlateTypes.Motorcycle_15
     }
 }

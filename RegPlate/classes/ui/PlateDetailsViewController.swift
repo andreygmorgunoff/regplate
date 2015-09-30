@@ -14,9 +14,17 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet
     var tableView : UITableView!
     
+    @IBOutlet
+    var saveButton : UIButton!
+
+    @IBOutlet
+    var unsaveButton : UIButton!
+
     var plate : PlateUAProtocol?
     
     var plates : UAPlatesDataSource?
+    
+    var userPlates : UserUAPlatesDataSource?
     
     override func viewDidLoad()
     {
@@ -29,7 +37,19 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
         plates = UAPlatesDataSource()
         plates!.plates.append(plate!)
         
+        userPlates = UserUAPlatesDataSource()
+        
         PlateUAUIUtils.registerUAPlateCells(self.tableView)
+        
+        if userPlates?.getPlate(plate!) != nil
+        {
+            saveButton.hidden = true
+        }
+        else
+        {
+            saveButton.hidden = false
+        }
+        unsaveButton.hidden = !saveButton.hidden
     }
 
     override func didReceiveMemoryWarning()
@@ -37,43 +57,33 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func save(sender: UIButton)
+
+    @IBAction func handleSerialization(sender: UIButton)
     {
-        //1
-        let appDelegate =
-        UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext!
-        
-        //2
-        let entity =  NSEntityDescription.entityForName("TPlate",
-            inManagedObjectContext:
-            managedContext)
-        
-        let dbPlate = TPlate(entity: entity!,
-            insertIntoManagedObjectContext:managedContext)
-        
-        //3
-        if let _plate = plate
+        if sender === saveButton
         {
-            if let _value = _plate.value
-            {
-                dbPlate.plate = _value
-                dbPlate.code  = _plate.type.rawValue
-            }
+            save()
         }
-        
-        //4
-        var error: NSError?
-        if !managedContext.save(&error) {
-            println("Could not save \(error), \(error?.userInfo)")
+        else
+        {
+            unsave()
         }
+    }
+    
+    func save()
+    {
+        userPlates?.savePlate(plate!)
+
+        saveButton.hidden = true
+        unsaveButton.hidden = !saveButton.hidden
+    }
+
+    func unsave()
+    {
+        userPlates?.unsavePlate(plate!)
         
-        //5
-//        people.append(person)
-        
-        self.navigationController?.popViewControllerAnimated(true)
+        saveButton.hidden = false
+        unsaveButton.hidden = !saveButton.hidden
     }
 
     /*

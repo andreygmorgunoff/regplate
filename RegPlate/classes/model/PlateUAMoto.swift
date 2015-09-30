@@ -14,7 +14,7 @@ class PlateUAMoto04 : PlateUAAuto04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Motorbike_04
+        uaType = PlateUAConstants.PlateTypes.Motorbike_04
     }
     
     override class func regexp() -> String?
@@ -96,6 +96,6 @@ class PlateUAMoto15 : PlateUAMoto04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Motorbike_15
+        uaType = PlateUAConstants.PlateTypes.Motorbike_15
     }
 }

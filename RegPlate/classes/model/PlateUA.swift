@@ -11,11 +11,6 @@ import Foundation
 protocol PlateUAProtocol : PlateProtocol
 {
     /**
-    * Plate type
-    */
-    var type : PlateUAConstants.PlateTypes { get }
-    
-    /**
     * Plate mode
     */
     var mode : PlateUAConstants.PlateMode { get }
@@ -98,7 +93,7 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
     {
         self.input = input
         
-        type = PlateUAConstants.PlateTypes.Unknown
+        uaType = PlateUAConstants.PlateTypes.Unknown
     }
     
     class func regexp() -> String?
@@ -154,11 +149,11 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
         return result
     }
     
-    var type   = PlateUAConstants.PlateTypes.Unknown
+    var uaType : PlateUAConstants.PlateTypes
     
     var back   : String
     {
-        return PlateUAUtils.backImageNameFor(type: type)
+        return PlateUAUtils.backImageNameFor(type: uaType)
     }
     
     var year  : String?
@@ -280,6 +275,11 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
         return PlateUAConstants.PlateCountryType.Other
     }
     
+    var type : String
+    {
+        return uaType.rawValue
+    }
+
     var unique : Bool
     {
         let output : String = self.normalizedInput()
@@ -299,10 +299,15 @@ class PlateUA : PlateUAProtocol, PlateTemplatable
     func isEqualTo(plate : PlateProtocol) -> Bool
     {
         var result = false
-        
-        if (plate.value == self.value) && (self.isKindOfClass(plate.dynamicType))
+
+        if plate is PlateUAProtocol
         {
-            result = true
+            let uaPlate = plate as! PlateUAProtocol
+            
+            if (plate.value == self.value) && (self.type == uaPlate.type)
+            {
+                result = true
+            }
         }
         
         return result

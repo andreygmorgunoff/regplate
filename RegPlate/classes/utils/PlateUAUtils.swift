@@ -281,8 +281,10 @@ struct PlateUAUtils : Plates
         return type.rawValue
     }
     
-    static func autoTypesForPlateType (plateType : PlateUAConstants.PlateTypes) -> Set<PlateUAConstants.AutoTypes>
+    static func autoTypesForPlateType (type : String) -> Set<PlateUAConstants.AutoTypes>
     {
+        let plateType = PlateUAConstants.PlateTypes(rawValue: type)!
+        
         var result = Set<PlateUAConstants.AutoTypes>()
         
         switch plateType

@@ -27,6 +27,11 @@ protocol PlateProtocol
     */
     var year   : String? { get }
     
+    /**
+    * Plate type
+    */
+    var type : String { get }
+    
     func isEqualTo(plate : PlateProtocol) -> Bool
 }
 

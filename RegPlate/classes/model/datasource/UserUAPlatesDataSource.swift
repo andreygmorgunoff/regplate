@@ -29,7 +29,7 @@ class UserUAPlatesDataSource : UAPlatesDataSource
         return managedContext
     }()
     
-    lazy var storedUserPlates: NSFetchedResultsController =
+    func storedUserPlates() -> NSFetchedResultsController
     {
         let fetchRequest = NSFetchRequest(entityName: "TPlate")
         let sortDescriptor = NSSortDescriptor(key: "code", ascending: true)
@@ -51,13 +51,13 @@ class UserUAPlatesDataSource : UAPlatesDataSource
         }
         
         return result
-    }()
+    }
     
     func updatePlates()
     {
         self.plates.removeAll(keepCapacity: true)
         
-        if let stored = storedUserPlates.fetchedObjects
+        if let stored = storedUserPlates().fetchedObjects
         {
             for object in stored
             {
@@ -78,7 +78,7 @@ class UserUAPlatesDataSource : UAPlatesDataSource
         updatePlates()
     }
     
-    func hasPlate(plate : PlateProtocol) -> Bool
+    func hasPlate(plate : PlateUAProtocol) -> Bool
     {
         var result = false
         
@@ -89,6 +89,91 @@ class UserUAPlatesDataSource : UAPlatesDataSource
                 result = true
                 break
             }
+        }
+        
+        return result
+    }
+    
+    func getPlate(plate : PlateUAProtocol) -> TPlate?
+    {
+        var result : TPlate?
+        
+        let entity =  NSEntityDescription.entityForName("TPlate",
+            inManagedObjectContext:
+            self.context)
+        
+        let fetchPredicate = NSPredicate(format: "code = %@ AND plate = %@", argumentArray: [plate.type, plate.value!])
+        
+        let fetchRequest = NSFetchRequest(entityName: "TPlate")
+        fetchRequest.predicate = fetchPredicate
+        
+        if let fetchResults = self.context.executeFetchRequest(fetchRequest, error: nil) as? [TPlate]
+        {
+            if fetchResults.count > 0
+            {
+                result = fetchResults[0]
+            }
+        }
+
+        return result
+    }
+    
+    func savePlate(plate : PlateUAProtocol) -> Bool
+    {
+        var result = false
+        
+        let entity =  NSEntityDescription.entityForName("TPlate",
+            inManagedObjectContext:
+            self.context)
+        
+        let dbPlate = TPlate(entity: entity!,
+            insertIntoManagedObjectContext:self.context)
+            
+        //3
+        if let _value = plate.value
+        {
+            dbPlate.plate = _value
+            dbPlate.code  = plate.type
+        }
+        
+        //4
+        var error: NSError?
+        if !self.context.save(&error)
+        {
+            println("Could not save \(error), \(error?.userInfo)")
+        }
+        else
+        {
+            self.plates.append(plate)
+            result = true
+        }
+        
+        return result
+    }
+    
+    func unsavePlate(plate : PlateUAProtocol) -> Bool
+    {
+        var result = false
+        
+        if let dbPlate = getPlate(plate)
+        {
+            self.context.deleteObject(dbPlate)
+            self.plates = self.plates.filter({ (obj) -> Bool in
+
+                var result = false
+                
+                let item : PlateUAProtocol = obj as! PlateUAProtocol
+                
+                if item.type == plate.type && item.value == plate.value
+                {
+                    result = true
+                }
+                
+                return result
+            })
+
+            
+            result = true
         }
         
         return result

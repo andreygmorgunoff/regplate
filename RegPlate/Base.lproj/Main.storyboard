@@ -197,13 +197,13 @@
                                     <outlet property="delegate" destination="nd0-dr-Cbc" id="0Wt-fD-teb"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="34" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIV-Kb-Leb">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="34" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIV-Kb-Leb">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="save:" destination="nd0-dr-Cbc" eventType="touchUpInside" id="Ie3-wF-ctK"/>
+                                    <action selector="handleSerialization:" destination="nd0-dr-Cbc" eventType="touchUpInside" id="50o-fJ-S37"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhN-Oa-Hry">
@@ -217,6 +217,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msM-TD-4Km">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.18127436490000001" blue="0.17762268819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Remove">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSerialization:" destination="nd0-dr-Cbc" eventType="touchUpInside" id="4Js-jD-h0s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -225,17 +236,22 @@
                             <constraint firstAttribute="centerX" secondItem="EIV-Kb-Leb" secondAttribute="centerX" id="8FT-nb-8wz"/>
                             <constraint firstItem="EIV-Kb-Leb" firstAttribute="top" secondItem="xmk-BB-pYf" secondAttribute="bottom" constant="54" id="BKF-xJ-5Pf"/>
                             <constraint firstItem="xmk-BB-pYf" firstAttribute="leading" secondItem="bcQ-jh-rFV" secondAttribute="leadingMargin" constant="-16" id="gZt-pw-PUV"/>
+                            <constraint firstItem="msM-TD-4Km" firstAttribute="top" secondItem="xmk-BB-pYf" secondAttribute="bottom" constant="54" id="rN9-QS-7Sv"/>
+                            <constraint firstAttribute="centerX" secondItem="msM-TD-4Km" secondAttribute="centerX" constant="-0.5" id="tKs-HW-1EM"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="xmk-BB-pYf"/>
                                 <exclude reference="EIV-Kb-Leb"/>
                                 <exclude reference="nhN-Oa-Hry"/>
+                                <exclude reference="msM-TD-4Km"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0e7-wC-JEY"/>
                                 <exclude reference="0vB-HD-Rx0"/>
                                 <exclude reference="gZt-pw-PUV"/>
+                                <exclude reference="rN9-QS-7Sv"/>
+                                <exclude reference="tKs-HW-1EM"/>
                                 <exclude reference="8FT-nb-8wz"/>
                                 <exclude reference="BKF-xJ-5Pf"/>
                             </mask>
@@ -245,11 +261,14 @@
                                 <include reference="xmk-BB-pYf"/>
                                 <include reference="EIV-Kb-Leb"/>
                                 <include reference="nhN-Oa-Hry"/>
+                                <include reference="msM-TD-4Km"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0e7-wC-JEY"/>
                                 <include reference="0vB-HD-Rx0"/>
                                 <include reference="gZt-pw-PUV"/>
+                                <include reference="rN9-QS-7Sv"/>
+                                <include reference="tKs-HW-1EM"/>
                                 <include reference="8FT-nb-8wz"/>
                                 <include reference="BKF-xJ-5Pf"/>
                             </mask>
@@ -257,7 +276,9 @@
                     </view>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="saveButton" destination="EIV-Kb-Leb" id="y6S-L8-Jo4"/>
                         <outlet property="tableView" destination="xmk-BB-pYf" id="qlf-gk-463"/>
+                        <outlet property="unsaveButton" destination="msM-TD-4Km" id="k0d-pw-gE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WX-Qr-0BH" userLabel="First Responder" sceneMemberID="firstResponder"/>

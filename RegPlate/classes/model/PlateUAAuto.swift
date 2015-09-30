@@ -16,7 +16,7 @@ class PlateUAAuto04 : PlateUA
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Auto_04
+        uaType = PlateUAConstants.PlateTypes.Auto_04
     }
     
     override func normalizedInput() -> String
@@ -89,7 +89,7 @@ class PlateUAAuto15 : PlateUAAuto04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Auto_15
+        uaType = PlateUAConstants.PlateTypes.Auto_15
     }
 }
 
@@ -99,7 +99,7 @@ class PlateUAAutoUsaJapan04 : PlateUAAuto04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.USA_Japan_04
+        uaType = PlateUAConstants.PlateTypes.USA_Japan_04
     }
     
     /**
@@ -117,6 +117,6 @@ class PlateUAAutoUsaJapan15 : PlateUAAutoUsaJapan04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.USA_Japan_15
+        uaType = PlateUAConstants.PlateTypes.USA_Japan_15
     }
 }

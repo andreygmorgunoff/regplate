@@ -14,7 +14,7 @@ class PlateUAMotoTemporary04 : PlateUAAutoTemporary04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Motorbike_Temporary_04
+        uaType = PlateUAConstants.PlateTypes.Motorbike_Temporary_04
     }
     
     /**
@@ -32,6 +32,6 @@ class PlateUAMotoTemporary15 : PlateUAMotoTemporary04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Motorbike_Temporary_15
+        uaType = PlateUAConstants.PlateTypes.Motorbike_Temporary_15
     }
 }

@@ -14,7 +14,7 @@ class PlateUAAutoTaxi04 : PlateUAAuto04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Auto_Taxi_04
+        uaType = PlateUAConstants.PlateTypes.Auto_Taxi_04
     }
     
     override var mode : PlateUAConstants.PlateMode
@@ -29,6 +29,6 @@ class PlateUAAutoTaxi15 : PlateUAAutoTaxi04
     {
         super.init(input: input)
         
-        type = PlateUAConstants.PlateTypes.Auto_Taxi_15
+        uaType = PlateUAConstants.PlateTypes.Auto_Taxi_15
     }
 }
