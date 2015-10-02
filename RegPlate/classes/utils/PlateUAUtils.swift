@@ -329,7 +329,10 @@ struct PlateUAUtils : Plates
             PlateUAConstants.PlateTypes.USA_Japan_15,
             PlateUAConstants.PlateTypes.Police_04,
             PlateUAConstants.PlateTypes.Police_15,
-            PlateUAConstants.PlateTypes.Diplomatic,
+            PlateUAConstants.PlateTypes.Diplomatic04_13,
+            PlateUAConstants.PlateTypes.Diplomatic13_DP,
+            PlateUAConstants.PlateTypes.Diplomatic13_CDP,
+            PlateUAConstants.PlateTypes.Diplomatic13_S,
             PlateUAConstants.PlateTypes.Army_Volonter_14
                 :
                 
@@ -389,4 +392,93 @@ struct PlateUAUtils : Plates
         
         return result
     }
+    
+    static func convertPlate(dbPlate : TPlate) -> PlateUAProtocol?
+    {
+        var result : PlateUAProtocol?
+        var plateType : PlateUAConstants.PlateTypes =  PlateUAConstants.PlateTypes(rawValue: dbPlate.code)!
+
+        switch plateType
+        {
+        case .Auto_04 :
+            result = PlateUAAuto04(input: dbPlate.plate)
+        case .Auto_15 :
+            result = PlateUAAuto15(input: dbPlate.plate)
+        case .Auto_Taxi_04 :
+            result = PlateUAAutoTaxi04(input: dbPlate.plate)
+        case .Auto_Taxi_15 :
+            result = PlateUAAutoTaxi15(input: dbPlate.plate)
+        case .Auto_Temporary_04 :
+            result = PlateUAAutoTemporary04(input: dbPlate.plate)
+        case .Auto_Temporary_15 :
+            result = PlateUAAutoTemporary15(input: dbPlate.plate)
+        case .Auto_Trade_Temporary_04 :
+            result = PlateUAAutoTemporaryDealer04(input: dbPlate.plate)
+        case .Auto_Trade_Temporary_15 :
+            result = PlateUAAutoTemporaryDealer15(input: dbPlate.plate)
+        case .Motorbike_04 :
+            result = PlateUAMoto04(input: dbPlate.plate)
+        case .Motorbike_15 :
+            result = PlateUAMoto15(input: dbPlate.plate)
+        case .Motorbike_Temporary_04 :
+            result = PlateUAMotoTemporary04(input: dbPlate.plate)
+        case .Motorbike_Temporary_15 :
+            result = PlateUAMotoTemporary15(input: dbPlate.plate)
+        case .Motorbike_Trade_Temporary_04 :
+            result = PlateUAMotoTemporaryDealer04(input: dbPlate.plate)
+        case .Motorbike_Trade_Temporary_15 :
+            result = PlateUAMotoTemporaryDealer15(input: dbPlate.plate)
+        case .Diplomatic04_13 :
+            result = PlateUAAutoDiplomatic04_13(input: dbPlate.plate)
+        case .Diplomatic13_CDP :
+            result = PlateUAAutoDiplomatic13_CDP(input: dbPlate.plate)
+        case .Diplomatic13_DP :
+            result = PlateUAAutoDiplomatic13_DP(input: dbPlate.plate)
+        case .Diplomatic13_S :
+            result = PlateUAAutoDiplomatic13_S(input: dbPlate.plate)
+        case .Motorcycle_04 :
+            result = PlateUAMotorcycle04(input: dbPlate.plate)
+        case .Motorcycle_15 :
+            result = PlateUAMotorcycle15(input: dbPlate.plate)
+        case .Motorcycle_Temporary_04 :
+            result = PlateUAMotorcycleTemporary04(input: dbPlate.plate)
+        case .Motorcycle_Temporary_15 :
+            result = PlateUAMotorcycleTemporary15(input: dbPlate.plate)
+        case .Motorcycle_Trade_Temporary_04 :
+            result = PlateUAMotorcycleTemporaryDealer04(input: dbPlate.plate)
+        case .Motorcycle_Trade_Temporary_15 :
+            result = PlateUAMotorcycleTemporaryDealer15(input: dbPlate.plate)
+        case .USA_Japan_04 :
+            result = PlateUAAutoUsaJapan04(input: dbPlate.plate)
+        case .USA_Japan_15 :
+            result = PlateUAAutoUsaJapan15(input: dbPlate.plate)
+        case .Tractor_95 :
+            result = PlateUAAutoTracktor95(input: dbPlate.plate)
+        case .Tractor_Temporary_13 :
+            result = PlateUAAutoTracktorTemporary13(input: dbPlate.plate)
+        case .Army_95 :
+            result = PlateUAAutoArmy95(input: dbPlate.plate)
+        case .Army_Head_07 :
+            result = PlateUAAutoArmyHead07(input: dbPlate.plate)
+        case .Army_Volonter_14 :
+            result = PlateUAAutoArmyVolonter14(input: dbPlate.plate)
+        case .Army_Moto_95 :
+            result = PlateUAAutoArmyMoto95(input: dbPlate.plate)
+        case .Police_04 :
+            result = PlateUAAutoPolice04(input: dbPlate.plate)
+        case .Police_15 :
+            result = PlateUAAutoPolice15(input: dbPlate.plate)
+        case .Police_Head_15 :
+            result = PlateUAAutoPoliceHead15(input: dbPlate.plate)
+        case .Specific_10 :
+            result = PlateUAStaff10(input: dbPlate.plate)
+        case .Specific_Temporary_15 :
+            result = PlateUAStaffTemporary15(input: dbPlate.plate)
+        default:
+            result = nil
+        }
+        
+        return result
+    }
+
 }

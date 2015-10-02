@@ -13,5 +13,4 @@ class TPlate: NSManagedObject {
 
     @NSManaged var code: String
     @NSManaged var plate: String
-
 }

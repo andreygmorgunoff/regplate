@@ -27,6 +27,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet
     var segmented : UISegmentedControl!
     
+    @IBOutlet
+    var searchBar : UISearchBar!
+    
     var selected : NSIndexPath?
     
     func isSearchUAPlatesMode() -> Bool
@@ -53,6 +56,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.contentInset = insets
     }
 
+    func reloadData()
+    {
+        currentPlates.filter(searchBar.text)
+        
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        reloadData()
+    }
     
     @IBAction func didChangedMode(sender: AnyObject)
     {
@@ -65,7 +79,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             currentPlates = userPlates
         }
         
-        self.tableView.reloadData()
+        reloadData()
     }
     
     override func didReceiveMemoryWarning()
@@ -96,18 +110,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        if (isSearchUAPlatesMode())
+        let plate = currentPlates.plates[indexPath.row] as? PlateUAProtocol
+        
+        if (plate!.unique)
         {
-            let plate = currentPlates.plates[indexPath.row] as? PlateUAProtocol
-            
-            if (plate!.unique)
-            {
-                self.performSegueWithIdentifier("show", sender: indexPath)
-                
-            }
-        }
-        else
-        {
+            self.performSegueWithIdentifier("show", sender: indexPath)
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -122,22 +129,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     // table search delegate
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
     {
-        currentPlates.filter(searchText)
-        
-        tableView.reloadData()
+        reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if (isSearchUAPlatesMode())
+        if (segue.identifier == "show")
         {
-            if (segue.identifier == "show")
-            {
-                let controller: PlateDetailsViewController = segue.destinationViewController as! PlateDetailsViewController
-                let indexPath = sender as! NSIndexPath
-                
-                controller.plate = currentPlates.plates[indexPath.row] as? PlateUAProtocol
-            }
+            let controller: PlateDetailsViewController = segue.destinationViewController as! PlateDetailsViewController
+            let indexPath = sender as! NSIndexPath
+            
+            controller.plate = currentPlates.plates[indexPath.row] as? PlateUAProtocol
         }
     }
 }

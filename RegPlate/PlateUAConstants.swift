@@ -68,7 +68,10 @@ class PlateUAConstants
         case Motorbike_Trade_Temporary_15 = "3.3.15"
         
         // 4
-        case Diplomatic = "4..04"
+        case Diplomatic04_13 = "4..04"
+        case Diplomatic13_S = "4..4_13S"
+        case Diplomatic13_DP = "4..04_13DP"
+        case Diplomatic13_CDP = "4..04_13CDP"
         
         // 5
         case Motorcycle_04 = "5..04"

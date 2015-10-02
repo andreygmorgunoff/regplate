@@ -17,7 +17,7 @@ class PlateUAAutoDiplomatic04_13 : PlateUAAuto04
     {
         super.init(input: input)
         
-        uaType = PlateUAConstants.PlateTypes.Diplomatic
+        uaType = PlateUAConstants.PlateTypes.Diplomatic04_13
     }
     
     override class func regexp() -> String?
@@ -146,6 +146,13 @@ class PlateUAAutoDiplomatic13_DP : PlateUAAutoDiplomatic04_13
 {
     static let kDiplomatic13_DP_MaxLength = 8
     
+    required init(input: String)
+    {
+        super.init(input: input)
+        
+        uaType = PlateUAConstants.PlateTypes.Diplomatic13_DP
+    }
+
     override class func regexp() -> String?
     {
         let unknownLetter = "\\" + self.unknownLetterChar()
@@ -220,6 +227,13 @@ class PlateUAAutoDiplomatic13_DP : PlateUAAutoDiplomatic04_13
 
 class PlateUAAutoDiplomatic13_S : PlateUAAutoDiplomatic04_13
 {
+    required init(input: String)
+    {
+        super.init(input: input)
+        
+        uaType = PlateUAConstants.PlateTypes.Diplomatic13_S
+    }
+    
     override class func regexp() -> String?
     {
         let unknownLetter = "\\" + self.unknownLetterChar()
@@ -244,6 +258,13 @@ class PlateUAAutoDiplomatic13_S : PlateUAAutoDiplomatic04_13
 class PlateUAAutoDiplomatic13_CDP : PlateUAAutoDiplomatic13_DP
 {
     static let kDiplomatic13_CDP_MaxLength = 6
+    
+    required init(input: String)
+    {
+        super.init(input: input)
+        
+        uaType = PlateUAConstants.PlateTypes.Diplomatic13_CDP
+    }
     
     override class func regexp() -> String?
     {

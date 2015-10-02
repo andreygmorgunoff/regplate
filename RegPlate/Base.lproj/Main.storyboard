@@ -155,6 +155,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="800"/>
                     <connections>
+                        <outlet property="searchBar" destination="UPx-EA-cyf" id="OT6-Mb-Ihc"/>
                         <outlet property="segmented" destination="e67-Aw-XlO" id="yZL-Go-VgI"/>
                         <outlet property="tableView" destination="0rz-YD-H05" id="EAd-uJ-fHo"/>
                         <segue destination="nd0-dr-Cbc" kind="show" identifier="show" id="baO-4g-H6m"/>
@@ -247,13 +248,13 @@
                                 <exclude reference="msM-TD-4Km"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="8FT-nb-8wz"/>
+                                <exclude reference="BKF-xJ-5Pf"/>
+                                <exclude reference="rN9-QS-7Sv"/>
+                                <exclude reference="tKs-HW-1EM"/>
                                 <exclude reference="0e7-wC-JEY"/>
                                 <exclude reference="0vB-HD-Rx0"/>
                                 <exclude reference="gZt-pw-PUV"/>
-                                <exclude reference="rN9-QS-7Sv"/>
-                                <exclude reference="tKs-HW-1EM"/>
-                                <exclude reference="8FT-nb-8wz"/>
-                                <exclude reference="BKF-xJ-5Pf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -264,13 +265,13 @@
                                 <include reference="msM-TD-4Km"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="8FT-nb-8wz"/>
+                                <include reference="BKF-xJ-5Pf"/>
+                                <include reference="rN9-QS-7Sv"/>
+                                <include reference="tKs-HW-1EM"/>
                                 <include reference="0e7-wC-JEY"/>
                                 <include reference="0vB-HD-Rx0"/>
                                 <include reference="gZt-pw-PUV"/>
-                                <include reference="rN9-QS-7Sv"/>
-                                <include reference="tKs-HW-1EM"/>
-                                <include reference="8FT-nb-8wz"/>
-                                <include reference="BKF-xJ-5Pf"/>
                             </mask>
                         </variation>
                     </view>

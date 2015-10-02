@@ -65,9 +65,10 @@ class UserUAPlatesDataSource : UAPlatesDataSource
                 {
                     let storedPlate = object as! TPlate
                     
-                    let auto = PlateUAAuto04(input: storedPlate.plate)
-                    
-                    self.plates.append(auto)
+                    if let auto = storedPlate.uaPlate()
+                    {
+                        self.plates.append(auto)
+                    }
                 }
             }
         }
