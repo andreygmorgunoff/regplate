@@ -229,6 +229,15 @@
                                     <action selector="handleSerialization:" destination="nd0-dr-Cbc" eventType="touchUpInside" id="4Js-jD-h0s"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YfF-pa-Zjt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nd0-dr-Cbc" id="ywf-4Y-t9o"/>
+                                    <outlet property="delegate" destination="nd0-dr-Cbc" id="qQW-wQ-DWN"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -236,6 +245,10 @@
                             <constraint firstItem="xmk-BB-pYf" firstAttribute="top" secondItem="Gly-Jm-4eC" secondAttribute="bottom" constant="24" id="0vB-HD-Rx0"/>
                             <constraint firstAttribute="centerX" secondItem="EIV-Kb-Leb" secondAttribute="centerX" id="8FT-nb-8wz"/>
                             <constraint firstItem="EIV-Kb-Leb" firstAttribute="top" secondItem="xmk-BB-pYf" secondAttribute="bottom" constant="54" id="BKF-xJ-5Pf"/>
+                            <constraint firstItem="YfF-pa-Zjt" firstAttribute="top" secondItem="msM-TD-4Km" secondAttribute="bottom" constant="55" id="RB6-1b-Khh"/>
+                            <constraint firstItem="HYC-rz-XYb" firstAttribute="top" secondItem="YfF-pa-Zjt" secondAttribute="bottom" id="awm-HE-JaG"/>
+                            <constraint firstItem="YfF-pa-Zjt" firstAttribute="leading" secondItem="bcQ-jh-rFV" secondAttribute="leadingMargin" constant="-16" id="c2u-5i-ers"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YfF-pa-Zjt" secondAttribute="trailing" constant="-16" id="eQz-1m-7lf"/>
                             <constraint firstItem="xmk-BB-pYf" firstAttribute="leading" secondItem="bcQ-jh-rFV" secondAttribute="leadingMargin" constant="-16" id="gZt-pw-PUV"/>
                             <constraint firstItem="msM-TD-4Km" firstAttribute="top" secondItem="xmk-BB-pYf" secondAttribute="bottom" constant="54" id="rN9-QS-7Sv"/>
                             <constraint firstAttribute="centerX" secondItem="msM-TD-4Km" secondAttribute="centerX" constant="-0.5" id="tKs-HW-1EM"/>
@@ -246,15 +259,20 @@
                                 <exclude reference="EIV-Kb-Leb"/>
                                 <exclude reference="nhN-Oa-Hry"/>
                                 <exclude reference="msM-TD-4Km"/>
+                                <exclude reference="YfF-pa-Zjt"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8FT-nb-8wz"/>
-                                <exclude reference="BKF-xJ-5Pf"/>
-                                <exclude reference="rN9-QS-7Sv"/>
-                                <exclude reference="tKs-HW-1EM"/>
                                 <exclude reference="0e7-wC-JEY"/>
                                 <exclude reference="0vB-HD-Rx0"/>
                                 <exclude reference="gZt-pw-PUV"/>
+                                <exclude reference="rN9-QS-7Sv"/>
+                                <exclude reference="tKs-HW-1EM"/>
+                                <exclude reference="8FT-nb-8wz"/>
+                                <exclude reference="BKF-xJ-5Pf"/>
+                                <exclude reference="RB6-1b-Khh"/>
+                                <exclude reference="c2u-5i-ers"/>
+                                <exclude reference="eQz-1m-7lf"/>
+                                <exclude reference="awm-HE-JaG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -263,22 +281,28 @@
                                 <include reference="EIV-Kb-Leb"/>
                                 <include reference="nhN-Oa-Hry"/>
                                 <include reference="msM-TD-4Km"/>
+                                <include reference="YfF-pa-Zjt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8FT-nb-8wz"/>
-                                <include reference="BKF-xJ-5Pf"/>
-                                <include reference="rN9-QS-7Sv"/>
-                                <include reference="tKs-HW-1EM"/>
                                 <include reference="0e7-wC-JEY"/>
                                 <include reference="0vB-HD-Rx0"/>
                                 <include reference="gZt-pw-PUV"/>
+                                <include reference="rN9-QS-7Sv"/>
+                                <include reference="tKs-HW-1EM"/>
+                                <include reference="8FT-nb-8wz"/>
+                                <include reference="BKF-xJ-5Pf"/>
+                                <include reference="RB6-1b-Khh"/>
+                                <include reference="c2u-5i-ers"/>
+                                <include reference="eQz-1m-7lf"/>
+                                <include reference="awm-HE-JaG"/>
                             </mask>
                         </variation>
                     </view>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="detailsTableView" destination="YfF-pa-Zjt" id="BsS-1E-xiH"/>
+                        <outlet property="plateTableView" destination="xmk-BB-pYf" id="p8e-Fg-ssm"/>
                         <outlet property="saveButton" destination="EIV-Kb-Leb" id="y6S-L8-Jo4"/>
-                        <outlet property="tableView" destination="xmk-BB-pYf" id="qlf-gk-463"/>
                         <outlet property="unsaveButton" destination="msM-TD-4Km" id="k0d-pw-gE2"/>
                     </connections>
                 </viewController>

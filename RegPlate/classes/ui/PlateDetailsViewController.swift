@@ -12,7 +12,10 @@ import CoreData
 class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet
-    var tableView : UITableView!
+    var plateTableView : UITableView!
+
+    @IBOutlet
+    var detailsTableView : UITableView!
     
     @IBOutlet
     var saveButton : UIButton!
@@ -25,6 +28,8 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
     var plates : UAPlatesDataSource?
     
     var userPlates : UserUAPlatesDataSource?
+    
+    var items = [PlateDetailCellItem]()
     
     override func viewDidLoad()
     {
@@ -39,7 +44,7 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
         
         userPlates = UserUAPlatesDataSource()
         
-        PlateUAUIUtils.registerUAPlateCells(self.tableView)
+        PlateUAUIUtils.registerUAPlateCells(self.plateTableView)
         
         if userPlates?.getPlate(plate!) != nil
         {
@@ -50,6 +55,16 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
             saveButton.hidden = false
         }
         unsaveButton.hidden = !saveButton.hidden
+        
+        // 1
+        detailsTableView.registerClass(PlateDetailCell.self, forCellReuseIdentifier: "DetailsTableViewCell")
+        detailsTableView.registerNib(UINib(nibName: "PlateDetailItemCell", bundle: nil), forCellReuseIdentifier: "DetailsTableViewCell")
+        
+        // 2
+        items += [PlateDetailCellItem(label: "towel:", text: "towel"),
+                  PlateDetailCellItem(label: "sheets:", text: "sheets"),
+                  PlateDetailCellItem(label: "soap:", text: "soap"),
+                  PlateDetailCellItem(label: "shampoo:", text: "shampoo")]
     }
 
     override func didReceiveMemoryWarning()
@@ -101,7 +116,18 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
     {
         var cell:UITableViewCell = UITableViewCell()
         
-        cell = plates!.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        if (tableView == plateTableView)
+        {
+            cell = plates!.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        }
+        else if (tableView == detailsTableView)
+        {
+            let detailsCell : PlateDetailCell = tableView.dequeueReusableCellWithIdentifier("DetailsTableViewCell", forIndexPath: indexPath) as! PlateDetailCell
+            
+            detailsCell.item = items[indexPath.row]
+            
+            cell = detailsCell
+        }
         
         return cell
     }
@@ -110,7 +136,14 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
     {
         var result = 0
         
-        result = plates!.tableView(tableView, numberOfRowsInSection: section)
+        if (tableView == plateTableView)
+        {
+            result = plates!.tableView(tableView, numberOfRowsInSection: section)
+        }
+        else if (tableView == detailsTableView)
+        {
+            result = items.count
+        }
         
         return result
     }
