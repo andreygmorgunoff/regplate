@@ -31,6 +31,16 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
     
     var items = [PlateDetailCellItem]()
     
+    lazy var cdStack : CDStack =
+    {
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let result = appDelegate.coreDataStack
+        
+        return result
+    }()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -41,6 +51,24 @@ class PlateDetailsViewController: UIViewController, UITableViewDataSource, UITab
         
         plates = UAPlatesDataSource()
         plates!.plates.append(plate!)
+        
+        
+        let privateContext = NSManagedObjectContext(
+            concurrencyType: .PrivateQueueConcurrencyType)
+        privateContext.persistentStoreCoordinator = cdStack.context.persistentStoreCoordinator
+        
+        // 2
+        privateContext.performBlock { () -> Void in
+            // 3
+            let results: [AnyObject]
+//            do {
+// TODO:            results = cdStack.context.executeFetchRequest(self.surfJournalFetchRequest())
+//            } catch {
+//                let nserror = error as NSError
+//                print("ERROR: \(nserror)")
+//                results = []
+//            }
+        }
         
         userPlates = UserUAPlatesDataSource()
         

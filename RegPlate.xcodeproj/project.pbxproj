@@ -34,6 +34,12 @@
 		5F4480091BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */; };
 		5F44800B1BB2826B00CC1DB6 /* PlateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44800A1BB2826B00CC1DB6 /* PlateDetailsViewController.swift */; };
 		5F44800C1BB2826B00CC1DB6 /* PlateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44800A1BB2826B00CC1DB6 /* PlateDetailsViewController.swift */; };
+		5F4F77E31BC7F15A00A9F7BF /* RegPlate.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5F4F77E01BC7F15A00A9F7BF /* RegPlate.sqlite */; };
+		5F4F77E41BC7F15A00A9F7BF /* RegPlate.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5F4F77E01BC7F15A00A9F7BF /* RegPlate.sqlite */; };
+		5F4F77E51BC7F15A00A9F7BF /* RegPlate.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 5F4F77E11BC7F15A00A9F7BF /* RegPlate.sqlite-shm */; };
+		5F4F77E61BC7F15A00A9F7BF /* RegPlate.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 5F4F77E11BC7F15A00A9F7BF /* RegPlate.sqlite-shm */; };
+		5F4F77E71BC7F15A00A9F7BF /* RegPlate.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 5F4F77E21BC7F15A00A9F7BF /* RegPlate.sqlite-wal */; };
+		5F4F77E81BC7F15A00A9F7BF /* RegPlate.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 5F4F77E21BC7F15A00A9F7BF /* RegPlate.sqlite-wal */; };
 		5F68BDFE1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */; };
 		5F8073C61BB3D4F400B4D27F /* TPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8073C51BB3D4F400B4D27F /* TPlate.swift */; };
 		5F8073C71BB3D4F400B4D27F /* TPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8073C51BB3D4F400B4D27F /* TPlate.swift */; };
@@ -60,6 +66,8 @@
 		5FA9563B1BC3C4ED006E63D2 /* PlateDetailCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA956391BC3C4ED006E63D2 /* PlateDetailCellItem.swift */; };
 		5FA9563D1BC3CA9C006E63D2 /* PlateDetailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA9563C1BC3CA9C006E63D2 /* PlateDetailItemCell.xib */; };
 		5FA9563E1BC3CA9C006E63D2 /* PlateDetailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA9563C1BC3CA9C006E63D2 /* PlateDetailItemCell.xib */; };
+		5FA956401BC51729006E63D2 /* CDStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9563F1BC51729006E63D2 /* CDStack.swift */; };
+		5FA956411BC51729006E63D2 /* CDStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9563F1BC51729006E63D2 /* CDStack.swift */; };
 		5FAF37681B8CC260000CABDA /* PlateUAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */; };
 		5FB0E5D31BB573AE001BAD67 /* PlateCellType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D21BB573AE001BAD67 /* PlateCellType1.xib */; };
 		5FB0E5D41BB573AE001BAD67 /* PlateCellType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB0E5D21BB573AE001BAD67 /* PlateCellType1.xib */; };
@@ -150,6 +158,9 @@
 		5F3209B51B981C940058C193 /* PlateUAAutoTemporaryDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoTemporaryDealer.swift; path = classes/model/PlateUAAutoTemporaryDealer.swift; sourceTree = "<group>"; };
 		5F4480071BB0461D00CC1DB6 /* PlateUAStaff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAStaff.swift; path = classes/model/PlateUAStaff.swift; sourceTree = "<group>"; };
 		5F44800A1BB2826B00CC1DB6 /* PlateDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateDetailsViewController.swift; path = classes/ui/PlateDetailsViewController.swift; sourceTree = "<group>"; };
+		5F4F77E01BC7F15A00A9F7BF /* RegPlate.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = RegPlate.sqlite; path = db/RegPlate.sqlite; sourceTree = "<group>"; };
+		5F4F77E11BC7F15A00A9F7BF /* RegPlate.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RegPlate.sqlite-shm"; path = "db/RegPlate.sqlite-shm"; sourceTree = "<group>"; };
+		5F4F77E21BC7F15A00A9F7BF /* RegPlate.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RegPlate.sqlite-wal"; path = "db/RegPlate.sqlite-wal"; sourceTree = "<group>"; };
 		5F68BDFD1BA30B6800E4E2C2 /* PlateUAAutoDiplomatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAAutoDiplomatic.swift; path = classes/model/PlateUAAutoDiplomatic.swift; sourceTree = "<group>"; };
 		5F8073C51BB3D4F400B4D27F /* TPlate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TPlate.swift; path = classes/model/db/TPlate.swift; sourceTree = "<group>"; };
 		5F8DDC3B1B9EF33B00294323 /* PlateUATests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateUATests.swift; sourceTree = "<group>"; };
@@ -163,6 +174,7 @@
 		5FA956361BC3C4BD006E63D2 /* PlateDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateDetailCell.swift; path = classes/ui/PlateDetailCell.swift; sourceTree = "<group>"; };
 		5FA956391BC3C4ED006E63D2 /* PlateDetailCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateDetailCellItem.swift; path = classes/ui/PlateDetailCellItem.swift; sourceTree = "<group>"; };
 		5FA9563C1BC3CA9C006E63D2 /* PlateDetailItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateDetailItemCell.xib; path = classes/ui/xib/PlateDetailItemCell.xib; sourceTree = "<group>"; };
+		5FA9563F1BC51729006E63D2 /* CDStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDStack.swift; path = classes/utils/CDStack.swift; sourceTree = "<group>"; };
 		5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlateUAUtils.swift; path = classes/utils/PlateUAUtils.swift; sourceTree = "<group>"; };
 		5FB0E5D21BB573AE001BAD67 /* PlateCellType1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType1.xib; path = classes/ui/xib/PlateCellType1.xib; sourceTree = "<group>"; };
 		5FB0E5D51BB577D5001BAD67 /* PlateCellType2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlateCellType2.xib; path = classes/ui/xib/PlateCellType2.xib; sourceTree = "<group>"; };
@@ -231,6 +243,7 @@
 		5F23F94E1B834EE600E221D1 /* RegPlate */ = {
 			isa = PBXGroup;
 			children = (
+				5F4F77DF1BC7F14600A9F7BF /* DB */,
 				5FA1C94C1BA1622900E8E8EB /* UI */,
 				5FF77B9D1B85D0D300DCA2A4 /* Utils */,
 				5FF77B961B85AF6E00DCA2A4 /* Model */,
@@ -270,6 +283,16 @@
 				5F23F9691B834EE600E221D1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F4F77DF1BC7F14600A9F7BF /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				5F4F77E01BC7F15A00A9F7BF /* RegPlate.sqlite */,
+				5F4F77E11BC7F15A00A9F7BF /* RegPlate.sqlite-shm */,
+				5F4F77E21BC7F15A00A9F7BF /* RegPlate.sqlite-wal */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 		5F8073C81BB3D4FB00B4D27F /* DB */ = {
@@ -362,6 +385,7 @@
 			children = (
 				5FF77B9E1B85D0ED00DCA2A4 /* RegExp.swift */,
 				5FAF37671B8CC260000CABDA /* PlateUAUtils.swift */,
+				5FA9563F1BC51729006E63D2 /* CDStack.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -449,6 +473,7 @@
 				5FB0E5F71BB57CB6001BAD67 /* PlateCellType13.xib in Resources */,
 				5FB0E5FA1BB57D62001BAD67 /* PlateCellType14.xib in Resources */,
 				5FB0E5DF1BB578DA001BAD67 /* PlateCellType5.xib in Resources */,
+				5F4F77E71BC7F15A00A9F7BF /* RegPlate.sqlite-wal in Resources */,
 				5FB0E5DC1BB5789E001BAD67 /* PlateCellType4.xib in Resources */,
 				5FB0E5E51BB57A63001BAD67 /* PlateCellType7.xib in Resources */,
 				5FB0E5D31BB573AE001BAD67 /* PlateCellType1.xib in Resources */,
@@ -458,6 +483,7 @@
 				5FB0E5E21BB57914001BAD67 /* PlateCellType6.xib in Resources */,
 				5FB0E5FD1BB57DD8001BAD67 /* PlateCellType15.xib in Resources */,
 				5FB0E5EE1BB57BCD001BAD67 /* PlateCellType10.xib in Resources */,
+				5F4F77E51BC7F15A00A9F7BF /* RegPlate.sqlite-shm in Resources */,
 				5FA9563D1BC3CA9C006E63D2 /* PlateDetailItemCell.xib in Resources */,
 				5FB0E6001BB57E2C001BAD67 /* PlateCellType16.xib in Resources */,
 				5FB0E5E81BB57ACD001BAD67 /* PlateCellType8.xib in Resources */,
@@ -466,6 +492,7 @@
 				5F23F95F1B834EE600E221D1 /* LaunchScreen.xib in Resources */,
 				5FB0E5F41BB57C74001BAD67 /* PlateCellType12.xib in Resources */,
 				5F23F95C1B834EE600E221D1 /* Images.xcassets in Resources */,
+				5F4F77E31BC7F15A00A9F7BF /* RegPlate.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +504,9 @@
 				5FB0E5FB1BB57D62001BAD67 /* PlateCellType14.xib in Resources */,
 				5FB0E5D71BB577D5001BAD67 /* PlateCellType2.xib in Resources */,
 				5FB0E6011BB57E2C001BAD67 /* PlateCellType16.xib in Resources */,
+				5F4F77E61BC7F15A00A9F7BF /* RegPlate.sqlite-shm in Resources */,
 				5FB0E5EC1BB57B5F001BAD67 /* PlateCellType9.xib in Resources */,
+				5F4F77E41BC7F15A00A9F7BF /* RegPlate.sqlite in Resources */,
 				5FB0E5E01BB578DA001BAD67 /* PlateCellType5.xib in Resources */,
 				5FB0E5E91BB57ACD001BAD67 /* PlateCellType8.xib in Resources */,
 				5FB0E5EF1BB57BCD001BAD67 /* PlateCellType10.xib in Resources */,
@@ -487,6 +516,7 @@
 				5FB0E5DA1BB5781D001BAD67 /* PlateCellType3.xib in Resources */,
 				5FB0E5FE1BB57DD8001BAD67 /* PlateCellType15.xib in Resources */,
 				5FB0E5DD1BB5789E001BAD67 /* PlateCellType4.xib in Resources */,
+				5F4F77E81BC7F15A00A9F7BF /* RegPlate.sqlite-wal in Resources */,
 				5FB0E5E61BB57A63001BAD67 /* PlateCellType7.xib in Resources */,
 				5FB0E5F81BB57CB6001BAD67 /* PlateCellType13.xib in Resources */,
 				5FB0E5E31BB57914001BAD67 /* PlateCellType6.xib in Resources */,
@@ -511,6 +541,7 @@
 				5F8073C61BB3D4F400B4D27F /* TPlate.swift in Sources */,
 				5F23F9751B83871900E221D1 /* SearchPlateCell.swift in Sources */,
 				5F03B0F91B99AEBB002FE30D /* PlateUAMotoTemporary.swift in Sources */,
+				5FA956401BC51729006E63D2 /* CDStack.swift in Sources */,
 				5F3209B61B981C940058C193 /* PlateUAAutoTemporaryDealer.swift in Sources */,
 				5FF77B9F1B85D0ED00DCA2A4 /* RegExp.swift in Sources */,
 				5F03B0F51B99A395002FE30D /* PlateUAMoto.swift in Sources */,
@@ -574,6 +605,7 @@
 				5FA956381BC3C4BD006E63D2 /* PlateDetailCell.swift in Sources */,
 				5F03B0F61B99A457002FE30D /* PlateUAMoto.swift in Sources */,
 				5F4480091BB0461D00CC1DB6 /* PlateUAStaff.swift in Sources */,
+				5FA956411BC51729006E63D2 /* CDStack.swift in Sources */,
 				5F01314E1BBE799E0016854D /* TPlate+utils.swift in Sources */,
 				5FB0E6051BB5888A001BAD67 /* UAPlatesDataSource.swift in Sources */,
 				5FE8CB291BA81658005D4866 /* PlateUAAutoDiplomatic.swift in Sources */,
